@@ -54,28 +54,28 @@ const Timer = ({ launchDate }: { launchDate: string }) => {
   }, [launchDate]);
 
   return (
-    <div className="flex justify-center lg:justify-start mt-10 gap-3">
-      <span className="flex flex-col justify-center items-center text-black text-2xl lg:text-4xl w-36 py-3">
+    <div className="flex justify-center lg:justify-start mt-10 gap-1">
+      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
         {timeLeft.days}
-        <small className="text-xs lg:text-sm uppercase font-semibold">
+        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
           Days
         </small>
       </span>
-      <span className="flex flex-col justify-center items-center text-black text-2xl lg:text-4xl w-36 py-3">
+      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
         {timeLeft.hours}
-        <small className="text-xs lg:text-sm uppercase font-semibold">
+        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
           Hours
         </small>
       </span>
-      <span className="flex flex-col justify-center items-center text-black text-2xl lg:text-4xl w-36 py-3">
+      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
         {timeLeft.minutes}
-        <small className="text-xs lg:text-sm uppercase font-semibold">
+        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
           Minutes
         </small>
       </span>
-      <span className="flex flex-col justify-center items-center text-black text-2xl lg:text-4xl w-36 py-3">
+      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
         {timeLeft.seconds}
-        <small className="text-xs lg:text-sm uppercase font-semibold">
+        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
           Seconds
         </small>
       </span>

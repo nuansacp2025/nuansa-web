@@ -4,15 +4,13 @@ import Timer from "./components/timer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-0">
+    <main className="flex min-h-screen flex-col items-center justify-between p-0 bg-teal-950 text-white">
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <h1 className="text-4xl md:text-6xl font-bold text-center">
-          Coming Soon: NUANSA 2025
-        </h1>
+        <Image src={'/images/logo/nuansa_logo.png'} alt={'logo'} width={0} height={0} sizes="100vw" style={{ width: '12rem', height: 'auto' }}/>
         <Timer launchDate="02-21-2025"></Timer>
       </div>
       <div className="flex flex-col itemscenter justify center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32">
-        <h2 className="text-2xl md:text-3xl pb-4 sm:pb-6 md:pb-10 font-bold text-center">
+        <h2 className="text-3xl md:text-4xl pb-4 sm:pb-6 md:pb-10 font-bold text-center text-orange-200">
           Synopsis
         </h2>
         <p className="text-center text-base sm:text-lg md:text-xl">
@@ -22,7 +20,7 @@ export default function Home() {
         </p>
       </div>
       <div className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30">
-        <h2 className="text-2xl md:text-3xl pb-8 md:pb-12 font-bold">
+        <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-orange-200">
           Characters
         </h2>
         <div className="flex justify-between">
@@ -46,7 +44,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="w-full py-4 text-center text-black">
+      <footer className="w-full py-4 text-center text-white">
         <p>© 2025 NUANSA. All rights reserved.</p>
       </footer>
     </main>
