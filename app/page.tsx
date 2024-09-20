@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Timer from "./components/timer";
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl font-bold text-center">
           Coming Soon: NUANSA 2025
         </h1>
+        <Timer launchDate="02-21-2025"></Timer>
       </div>
       <div className="flex flex-col itemscenter justify center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32">
         <h2 className="text-2xl md:text-3xl pb-4 sm:pb-6 md:pb-10 font-bold text-center">
