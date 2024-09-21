@@ -44,6 +44,22 @@ const getTimeLeft = (expiry: string): TimeCount => {
   };
 };
 
+const NumberDisplay = ({ value, label }: { value: string; label: string }) => {
+  return (
+    <>
+      <span
+        className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32"
+        suppressHydrationWarning
+      >
+        {value}
+        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
+          {label}
+        </small>
+      </span>
+    </>
+  );
+}
+
 const Timer = ({ launchDate }: { launchDate: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeCount>(getTimeLeft(launchDate));
 
@@ -55,30 +71,10 @@ const Timer = ({ launchDate }: { launchDate: string }) => {
 
   return (
     <div className="flex justify-center lg:justify-start mt-10 gap-1">
-      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
-        {timeLeft.days}
-        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
-          Days
-        </small>
-      </span>
-      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
-        {timeLeft.hours}
-        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
-          Hours
-        </small>
-      </span>
-      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
-        {timeLeft.minutes}
-        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
-          Minutes
-        </small>
-      </span>
-      <span className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32">
-        {timeLeft.seconds}
-        <small className="text-xs lg:text-sm uppercase font-semibold text-white pt-1">
-          Seconds
-        </small>
-      </span>
+      <NumberDisplay value={timeLeft.days} label="Days" />
+      <NumberDisplay value={timeLeft.hours} label="Hours" />
+      <NumberDisplay value={timeLeft.minutes} label="Minutes" />
+      <NumberDisplay value={timeLeft.seconds} label="Seconds" />
     </div>
   );
 };
