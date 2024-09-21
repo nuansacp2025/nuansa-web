@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-0 bg-teal-950 text-white">
       <div className="flex flex-col items-center justify-center h-screen w-full">
         <Image src={'/images/logo/nuansa_logo.png'} alt={'logo'} width={0} height={0} sizes="100vw" style={{ width: '12rem', height: 'auto' }}/>
-        <Timer launchDate="02-21-2025"></Timer>
+        <Timer launchDate="09-07-2025" />
       </div>
       <div className="flex flex-col itemscenter justify center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32">
         <h2 className="text-3xl md:text-4xl pb-4 sm:pb-6 md:pb-10 font-bold text-center text-orange-200">
