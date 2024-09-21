@@ -16,7 +16,7 @@ export default function Home() {
         <p className="text-center text-base sm:text-lg md:text-xl">
           The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly. 
           As punishment for her mistreatment of her mother, a prayer by the widow causes the daughter to be struck by lightning and turned into a crying stone statue. 
-          The story teaches the importance of honoring one's parents.
+          The story teaches the importance of honoring one&apos;s parents.
         </p>
       </div>
       <div className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30">
