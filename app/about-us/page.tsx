@@ -7,7 +7,7 @@ export default function AboutUs() {
     <div className="pt-12">
       {/* What is Nuansa section */}
       <section className="text-center py-12 px-10">
-        <h1 className="text-4xl font-bold mb-4">What is "Nuansa"</h1>
+        <h1 className="text-4xl font-bold mb-4">What is &quot;Nuansa&quot;</h1>
         <p className="text-lg mb-8">
           An annual arts and cultural event by a group of Indonesian students in NUS.
           It aims to promote the rich and diverse cultures of Indonesia.
