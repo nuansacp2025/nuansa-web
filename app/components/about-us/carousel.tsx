@@ -39,7 +39,6 @@ export default function Carousel({ children }: CarouselProps) {
         </SwiperSlide>
         : <></>
       ))}
-      <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
 
     </Swiper>
   );

@@ -36,7 +36,6 @@ export default function FunFact({ children }: CarouselProps) {
           </div>
         </SwiperSlide>
       ))}
-      <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
 
     </Swiper>
   );
