@@ -11,7 +11,7 @@ const Footer = () => {
         <Link href="https://www.instagram.com/nuansacp/">
           <Image src="/images/logo/instagram.svg" width={20} height={20} alt="Instagram" />
         </Link>
-        <Link href="https://www.youtube.com/channel/UC0eJwZ6ZwXoF9l6Z6J6J2Og">
+        <Link href="https://www.youtube.com/@NUANSAcp">
           <Image src="/images/logo/youtube.svg" width={20} height={20} alt="Youtube" />
         </Link>
       </div>
