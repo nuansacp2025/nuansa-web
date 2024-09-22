@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import ModalOverlay from "./components/modal-overlay";
 import Link from "next/link";
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
