@@ -22,7 +22,6 @@ export default function AboutUsHistorypage() {
         if (historyData) {
           setData(historyData);
         }
-        console.log('Data:', historyData);
       });
   }, []);
 
@@ -32,7 +31,7 @@ export default function AboutUsHistorypage() {
   const selectedVideo = useMemo<null | VideoData>(() => selectedHistory === null ? null : selectedHistory?.video, [selectedHistory]);
   const selectedVideoTitle = useMemo<string>(() => selectedVideo === null ? "" : selectedVideo?.title, [selectedVideo]);
   const selectedVideoSrc = useMemo<string>(() => selectedVideo === null ? "" : selectedVideo?.src, [selectedVideo]);
-  const years = useMemo<number[]>(() => data.map((history) => history.year), [data]);
+  const years = useMemo<number[]>(() => data.map(history => history.year), [data]);
 
   return (
     <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 p-4 md:p-8 items-start bg-black w-full min-h-screen">
