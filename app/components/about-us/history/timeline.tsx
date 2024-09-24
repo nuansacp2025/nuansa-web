@@ -8,6 +8,7 @@ interface TimelineProps {
 }
 
 export default function Timeline({ years, selectedHistoryIndex, setSelectedHistoryIndex }: TimelineProps) {
+
     return (
         <div className="flex flex-col items-center space-y-8 justify-start h-full">
             {years.map((year, index) => (
