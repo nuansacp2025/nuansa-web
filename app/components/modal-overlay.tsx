@@ -31,7 +31,7 @@ function ModalOverlay({ onClose, children }: ModalOverlayProps) {
       className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       onClick={handleOutsideClick}
     >
-      <div className="bg-white rounded-lg shadow-lg p-6 relative max-w-lg mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-6 relative mx-auto">
         
         <button
           onClick={onClose}

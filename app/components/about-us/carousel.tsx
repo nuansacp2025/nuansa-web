@@ -16,8 +16,6 @@ interface CarouselProps {
 }
 
 export default function Carousel({ children }: CarouselProps) {
-  const swiper = useSwiper();
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
