@@ -1,9 +1,9 @@
 "use client";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import Image from 'next/image';
 
-function ModalOverlay() {
+function ModalOverlayContent() {
     const searchParams = useSearchParams();
     const modal = searchParams.get("modal");
 
@@ -30,4 +30,10 @@ function ModalOverlay() {
     );
 }
 
-export default ModalOverlay;
+export default function ModalOverlay() {
+    return (
+        <Suspense fallback={null}>
+            <ModalOverlayContent />
+        </Suspense>
+    );
+}
