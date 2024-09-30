@@ -25,7 +25,7 @@ jobs:
 
             - name: Run tests
               run: npm test
-    deploy:
+    deploy-preview:
         runs-on: ubuntu-latest
 
         needs: test
@@ -49,4 +49,4 @@ jobs:
               run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
             
             - name: Deploy to Vercel Preview
-              run: vercel --pre --token=${{ secrets.VERCEL_TOKEN }}
+              run: vercel --token=${{ secrets.VERCEL_TOKEN }}
