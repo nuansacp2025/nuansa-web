@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function ModalOverlayContent() {
     const searchParams = useSearchParams();
-    const modal = searchParams.get("modal");
+    const modal = searchParams === null ? null : searchParams.get("modal");
 
     return (
         <>

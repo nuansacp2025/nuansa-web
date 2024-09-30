@@ -1,0 +1,52 @@
+name: Preview Deployment
+
+on:
+    push:
+
+env:
+    VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+    VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '20'
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Run tests
+              run: npm test
+    deploy:
+        runs-on: ubuntu-latest
+
+        needs: test
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '20'
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Install Vercel CLI
+              run: npm install -g vercel
+
+            - name: Pull Vercel Environment Information
+              run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+            
+            - name: Deploy to Vercel Preview
+              run: vercel --pre --token=${{ secrets.VERCEL_TOKEN }}
