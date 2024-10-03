@@ -12,7 +12,7 @@ export default function HistorySummary({ title, description }: HistorySummaryPro
                 {title}
             </h2>
             <p className="text-white font-poppins text-2xl text-justify">
-                {description}
+                <span dangerouslySetInnerHTML={{ __html: description }} />
             </p>
         </div>
     );
