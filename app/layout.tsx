@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import ModalOverlay from "./components/modal-overlay";
 import Link from "next/link";
 import Footer from "./components/footer";
+import ScrollToTopButton from "@/app/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <ScrollToTopButton />
         <Footer />
       </body>
     </html>
