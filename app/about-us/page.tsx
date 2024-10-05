@@ -26,6 +26,7 @@ export default function AboutUs() {
         </ModalOverlay>
         
       }
+      {/* What is Nuansa section */}
       <section className="text-center py-12 px-4 md:px-10">
         <h1 className="text-4xl font-bold mb-4">What is &quot;Nuansa&quot;</h1>
         <p className="text-lg mb-8">
@@ -115,7 +116,6 @@ export default function AboutUs() {
           />
         </div>
       </section>
-
     </div>
   );
 }

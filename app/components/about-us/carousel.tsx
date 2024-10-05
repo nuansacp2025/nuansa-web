@@ -1,9 +1,6 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { useSwiper } from 'swiper/react';
-
-
 import { ReactNode, useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
