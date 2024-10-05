@@ -4,12 +4,12 @@ import Image from 'next/image';
 import VideoFrame from '../components/about-us/video-frame';
 import Carousel from '../components/about-us/carousel';
 import FunFact from '../components/about-us/funfact';
-//import ModalOverlay from '../components/modal-overlay';
-//import { useState } from 'react';
+import ModalOverlay from '../components/modal-overlay';
+import { useState } from 'react';
 export default function AboutUs() {
   //To Test the modal Overlay Uncomment below
-  //const [isModalOpen, setIsModalOpen] = useState(true);
-  //const onClose = () => setIsModalOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+  const onClose = () => setIsModalOpen(false);
 
 
 
@@ -19,12 +19,12 @@ export default function AboutUs() {
         /*
         To test the modal overlay, uncomment below
         */
-        /*
+        
         isModalOpen && 
         <ModalOverlay onClose={onClose}>
-          <div className="text-3xl mb-8 text-lime-900">heasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffadfasdhe</div>
+          <div className="text-3xl mb-8 text-lime-900">headddddddddasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffadfasdhe</div>
         </ModalOverlay>
-        */
+        
       }
       <section className="text-center py-12 px-4 md:px-10">
         <h1 className="text-4xl font-bold mb-4">What is &quot;Nuansa&quot;</h1>
