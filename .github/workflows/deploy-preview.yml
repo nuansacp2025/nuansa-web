@@ -10,8 +10,8 @@ env:
 jobs:
   deploy-preview:
     uses: ./.github/workflows/deploy.yml
-      with:
-        environment: preproduction
-        preview: true
-      secrets: inherit
+    with:
+      environment: preproduction
+      preview: true
+    secrets: inherit
 
