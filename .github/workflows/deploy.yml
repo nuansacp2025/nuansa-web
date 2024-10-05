@@ -1,15 +1,13 @@
 name: Deploy to Vercel
 on:
+  workflow_call:
     inputs:
       environment:
         required: true
-        types: string
-        options:
-          - production
-          - preproduction
+        type: string
       preview:
         required: false
-        types: boolean
+        type: boolean
         default: true
 
 env:
