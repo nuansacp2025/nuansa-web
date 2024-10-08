@@ -1,0 +1,14 @@
+name: Echo PR
+on:
+  pull_request:
+
+jobs:
+  echo-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Echo PR
+        run: |
+          echo "Original Branch (Head): ${{ github.head_ref }}"
+          echo "Target Branch (Base): ${{ github.base_ref }}"
