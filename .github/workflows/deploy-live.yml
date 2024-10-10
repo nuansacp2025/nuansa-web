@@ -1,0 +1,28 @@
+name: Live Deployment
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy-preproduction-preview:
+    uses: ./.github/workflows/deploy.yml
+    if: github.ref_name == 'staging'
+    with:
+      environment: preproduction
+      preview: false
+    secrets: inherit
+  deploy-production-preview:
+    uses: ./.github/workflows/deploy.yml
+    if: github.ref_name == 'main'
+    with:
+      environment: production
+      preview: false
+    secrets: inherit
+
