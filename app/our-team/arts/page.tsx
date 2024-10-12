@@ -8,7 +8,7 @@ export default function Page() {
         <Image src={"/images/our-team/what-we-do.png"} alt="What We Do" fill={true} objectFit="cover" />
         <div className="relative w-full flex flex-col items-center md:flex-row">
           <div className="flex flex-1 items-center justify-center mb-12 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
               ARTS
             </h2>
           </div>
