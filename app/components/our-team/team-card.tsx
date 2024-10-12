@@ -1,17 +1,31 @@
+"use client";
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 interface TeamCardProps {
   imageSrc: string;
   name: string;
+  href: string;
 }
 
-export default function TeamCard({ imageSrc, name }: TeamCardProps) {
+export default function TeamCard({ imageSrc, name, href }: TeamCardProps) {
   return (
-    <div className="relative grow h-[200] rounded-md shadow-md overflow-hidden">
+    <motion.div
+      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+      className="relative grow h-[200] rounded-md shadow-md overflow-hidden"
+    >
       <Image src={imageSrc} alt={name} fill={true} objectFit="cover" />
-      <div className="absolute w-full h-full flex items-center justify-center text-white bg-black bg-opacity-40">
-        <h3 className="text-xl font-semibold">{name}</h3>
-      </div>
-    </div>
+      <Link href={href}>
+        <motion.div
+          whileHover={{ backgroundColor: "rgba(0, 0, 0, 0)", transition: { duration: 0.2 } }}
+          className="absolute w-full h-full flex items-center justify-center text-white"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        >
+          <h3 className="text-xl font-semibold">{name}</h3>
+        </motion.div>
+      </Link>
+    </motion.div>
   );
 }

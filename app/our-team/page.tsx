@@ -23,9 +23,9 @@ export default function Page() {
           Find Out More
         </h2>
         <div className="w-full flex flex-col gap-8 md:flex-row">
-          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="Arts" />
-          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="Production" />
-          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="External Affairs" />
+          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="Arts" href="/our-team/arts" />
+          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="Production" href="/our-team/production" />
+          <TeamCard imageSrc="/images/our-team/find-out-more.png" name="External Affairs" href="/our-team/external-affairs" />
         </div>
       </section>
     </main>
