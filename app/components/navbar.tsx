@@ -4,24 +4,26 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 
 const NavbarItem = ({ href, label, children }: { href: string, label: string, children?: ReactNode }) => {
+  const isHovered = React.useRef(false);
   const [dropdownHidden, setDropdownHidden] = React.useState(true);
-  const [dropdownOnHover, setDropdownOnHover] = React.useState(false);
 
   return (
     <div
-      className="relative"
-      onMouseEnter={children ? () => setTimeout(() => setDropdownHidden(false), 300) : undefined}
-      onMouseLeave={children ? () => setTimeout(() => setDropdownHidden(true), 300) : undefined}
+      className="relative flex flex-col p-4 gap-2"
+      onMouseEnter={children ? () => {
+        isHovered.current = true;
+        setTimeout(() => {setDropdownHidden(!isHovered.current)}, 250);
+      } : undefined}
+      onMouseLeave={children ? () => {
+        isHovered.current = false
+        setTimeout(() => {setDropdownHidden(!isHovered.current)}, 250);
+      } : undefined}
     >
       <Link href={href} className="text-sm font-semibold leading-6 text-white lg:text-gray-0">
         {label}
       </Link>
       {children && (
-        <div
-          className={`absolute ${(dropdownHidden && !dropdownOnHover) ? "hidden" : "flex"} flex-col p-2 items-stretch -left-4 top-full z-10 mt-4 w-screen max-w-xs overflow-hidden rounded-lg bg-white shadow-md`}
-          onMouseEnter={() => setDropdownOnHover(true)}
-          onMouseLeave={() => setDropdownOnHover(false)}
-        >
+        <div className={`absolute ${dropdownHidden ? "hidden" : "flex"} flex-col p-2 items-stretch -left-4 top-full z-10 -mt-4 w-screen max-w-xs overflow-hidden rounded-lg bg-white shadow-md`}>
           {children}
         </div>
       )}
@@ -40,15 +42,12 @@ const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactN
 }
 
 const Navbar = () => {
-  const [aboutUsHidden, setAboutUsHidden] = React.useState(true);
-  const [aboutUsOnHover, setAboutUsOnHover] = React.useState(false);
-
   return (
-    <nav className="flex items-center justify-center p-6 lg:px-8 ">
+    <nav className="flex items-center justify-center">
       <div
-        className={`fixed inset-0 z-10 bg-gray-800 bg-opacity-75 transition-opacity lg:relative lg:flex lg:gap-x-12 lg:bg-transparent opacity-100`}
+        className="fixed inset-0 z-10 lg:relative lg:flex lg:gap-x-12 opacity-100"
       >
-        <div className="flex flex-col lg:flex-row lg:gap-x-12 lg:items-center lg:justify-center p-4 lg:p-0">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-4">
           <NavbarItem href="/" label="Home" />
           <NavbarItem href="/about-us" label="About Us">
             <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
