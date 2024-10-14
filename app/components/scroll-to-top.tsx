@@ -39,7 +39,7 @@ const ScrollToTopButton = () => {
             initial="hide"
             animate={controls}
             onClick={scrollToTop}>
-            <FaArrowCircleUp className="text-4xl" />
+            <FaArrowCircleUp className="text-4xl text-white" />
         </motion.button>
     );
 };
