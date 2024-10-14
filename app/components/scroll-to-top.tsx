@@ -2,7 +2,7 @@
 
 import {useEffect} from "react";
 import {useAnimationControls, useScroll, motion, Variants} from "framer-motion";
-import {FaArrowUp} from "react-icons/fa"
+import {FaArrowAltCircleUp, FaArrowCircleUp, FaArrowUp} from "react-icons/fa"
 
 const isBrowser = () => typeof window != 'undefined';
 
@@ -19,12 +19,12 @@ const scrollToTop = () => {
 };
 
 const ScrollToTopButton = () => {
-    const {scrollYProgress} = useScroll();
+    const {scrollY} = useScroll();
     const controls = useAnimationControls();
 
     useEffect(() => {
-        return scrollYProgress.on('change', (latestValue) => {
-            if (latestValue > 0.5) {
+        return scrollY.on('change', (latestValue) => {
+            if (latestValue > window.innerHeight) {
                 controls.start('show');
             } else {
                 controls.start('hide');
@@ -34,12 +34,12 @@ const ScrollToTopButton = () => {
 
     return (
         <motion.button
-            className="fixed bottom-10 right-0 p-10 accent-orange-500"
+            className="fixed bottom-10 right-0 p-10"
             variants={ScrollToTopContainerVariants}
             initial="hide"
             animate={controls}
             onClick={scrollToTop}>
-            <FaArrowUp />
+            <FaArrowCircleUp className="text-4xl" />
         </motion.button>
     );
 };
