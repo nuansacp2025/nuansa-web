@@ -5,11 +5,14 @@ import Timer from "./components/timer";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 text-white">
+      <div className="fixed inset-0 -z-10">
+        <Image src={'/images/home/background.png'} alt={'Background'} layout="fill" objectFit="cover" quality={100} />
+      </div>
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <Image src={'/images/logo/nuansa_logo.png'} alt={'logo'} width={0} height={0} sizes="100vw" style={{ width: '12rem', height: 'auto' }}/>
+        <Image src={'/images/home/the-crying-stone.png'} alt={'The Crying Stone'} width={0} height={0} sizes="100vw" style={{ width: '24rem', height: 'auto' }}/>
         <Timer launchDate="09-07-2025" />
       </div>
-      <div className="flex flex-col itemscenter justify center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32">
+      <div className="flex flex-col items-center justify-center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32 bg-transparent">
         <h2 className="text-3xl md:text-4xl pb-4 sm:pb-6 md:pb-10 font-bold text-center text-orange-a">
           Synopsis
         </h2>
@@ -19,7 +22,7 @@ export default function Home() {
           The story teaches the importance of honoring one&apos;s parents.
         </p>
       </div>
-      <div className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30">
+      <div className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30 bg-transparent">
         <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-orange-a">
           Characters
         </h2>
