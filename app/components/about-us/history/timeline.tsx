@@ -14,8 +14,8 @@ export default function Timeline({ years, selectedHistoryIndex, setSelectedHisto
             {years.map((year, index) => (
                 <div key={index} className="flex items-center">
                     <div className="flex flex-col items-center mx-2 relative">
-                        <div className="w-2 h-2 bg-[#ECBF7F] rounded-full z-10"/>
-                        {index < years.length - 1? <div className="w-0.5 h-14 bg-[#ECBF7F] absolute"/> : null}
+                        <div className="w-2 h-2 bg-orange-a rounded-full z-10"/>
+                        {index < years.length - 1? <div className="w-0.5 h-14 bg-orange-a absolute"/> : null}
                     </div>
                     <Year
                         year={year}

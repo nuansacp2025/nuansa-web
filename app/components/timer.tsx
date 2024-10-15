@@ -48,7 +48,7 @@ const NumberDisplay = ({ value, label }: { value: string; label: string }) => {
   return (
     <>
       <span
-        className="flex flex-col justify-center items-center text-orange-200 text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32"
+        className="flex flex-col justify-center items-center text-orange-a text-2xl lg:text-4xl w-16 sm:w-24 lg:w-32"
         suppressHydrationWarning
       >
         {value}

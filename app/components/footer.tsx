@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="flex items-center bg-[#1a7f7d] justify-start px-8 py-4 lg:justify-between">
+    <div className="flex items-center bg-green-b justify-start px-8 py-4 lg:justify-between">
       <div className="flex items-center gap-x-4">
         <Link href="https://www.facebook.com/nuansa.culturalproductions/">
           <Image src="/images/logo/facebook.svg" width={20} height={20} alt="Facebook" />

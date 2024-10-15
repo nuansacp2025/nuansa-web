@@ -22,7 +22,7 @@ export default function AboutUs() {
         
         isModalOpen && 
         <ModalOverlay onClose={onClose}>
-          <div className="text-3xl mb-8 text-lime-900">
+          <div className="text-xl mb-8 text-gray-900">
             headddddddddasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffadfasdhe
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -50,18 +50,18 @@ export default function AboutUs() {
       </section>
 
       {/* Fun Fact Section */}
-      <section className="text-center py-12 px-4 md:px-20 bg-orange-50 flex flex-col md:flex-row items-center justify-center">
-        <h2 className="text-3xl mb-8 text-lime-900">Fun Fact</h2>
+      <section className="text-center py-12 px-4 md:px-20 bg-orange-a flex flex-col md:flex-row items-center justify-center">
+        <h2 className="text-3xl mb-8 text-green-a">Fun Fact</h2>
         <div className="flex-grow px-4 md:px-20">
           <FunFact>
-            <h2 className="text-3xl mb-8 text-lime-900">Fun Fact</h2>
-            <h2 className="text-3xl mb-8 text-lime-900">Fun Fict</h2>
+            <h2 className="text-3xl mb-8 text-green-a">Fun Fact</h2>
+            <h2 className="text-3xl mb-8 text-green-a">Fun Fict</h2>
           </FunFact>
         </div>
       </section>
 
       {/* Vision and Mission Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-orange-50 gap-8 py-12 px-4 md:px-10 text-lime-900">
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-orange-a gap-8 py-12 px-4 md:px-10 text-green-a">
         <div className="text-left">
           <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
           <p className="text-lg">
@@ -77,7 +77,7 @@ export default function AboutUs() {
       </section>
 
        {/* Memorable Clips Section */}
-       <section className="flex flex-col items-center justify-center py-12 text-center bg-lime-950 text-white pb-10">
+       <section className="flex flex-col items-center justify-center py-12 text-center bg-green-a text-white pb-10">
         <h2 className="text-3xl font-bold mb-5">Memorable Clips</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-y-8 md:gap-x-20">
           <Carousel>
@@ -99,7 +99,7 @@ export default function AboutUs() {
           </Carousel>
         </div>
       </section>
-      <section className="text-center py-12 bg-orange-50">
+      <section className="text-center py-12 bg-orange-a">
         {/* Flex container for Why Join Us section */}
         <div className="flex flex-col-reverse md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
           {/* Grid of Features (Networking, Collaboration, Creativity) */}
@@ -117,13 +117,13 @@ export default function AboutUs() {
 
           {/* Why Join Us heading */}
           <div className="mb-8 md:mb-0">
-            <h1 className="text-4xl mb-4 text-center text-lime-950">Why Join Us</h1>
+            <h1 className="text-4xl mb-4 text-center text-green-a">Why Join Us</h1>
           </div>
         </div>
 
         {/* Video section */}
         <div className="flex flex-col md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
-          <h1 className="text-4xl mb-4 text-lime-950">View Our Latest Show {">>"}</h1>
+          <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show {">>"}</h1>
           <VideoFrame
             videoTitle="RickRoll"
             videoSrc="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tSGI-Y2bIM5CKrxI"
