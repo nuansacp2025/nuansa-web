@@ -20,7 +20,7 @@ describe('Year Component', () => {
             <Year year={year} selected={true} setSelected={setSelected} />
         );
 
-        expect(getByText(year.toString())).toHaveClass('text-[#ECBF7F]');
+        expect(getByText(year.toString())).toHaveClass('text-orange-a');
     });
 
     it('applies the correct class when not selected', () => {
