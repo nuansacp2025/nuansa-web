@@ -70,7 +70,7 @@ const Navbar = () => {
   const [mobileMenuHidden, setMobileMenuHidden] = React.useState(true);
 
   return (
-    <nav className="flex sticky top-0 h-[72] shadow-lg items-center justify-between bg-teal-950 p-2 md:p-0">
+    <nav className="flex sticky top-0 h-[72] shadow-lg items-center justify-between bg-green-a p-2 md:p-0">
       <div>
         <span className="md:hidden ml-4 text-2xl text-white font-bold leading-8">
           NUANSA
@@ -80,7 +80,7 @@ const Navbar = () => {
         ${mobileMenuHidden ? "hidden" : "flex"}
         absolute h-max inset-0 top-full z-10 md:relative md:flex md:top-0 
         flex-col p-2 md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
-        bg-teal-900 md:bg-inherit
+        bg-green-b md:bg-inherit
         `}>
         <NavbarItem href="/" label="Home" />
         <NavbarItem href="/about-us" label="About Us">

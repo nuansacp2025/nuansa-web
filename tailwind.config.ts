@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'green-a': '#1F4C4A',
+        'green-b': '#1A7F7D',
+        'orange-a': '#ECBF7F',
+      },
       fontFamily: {
         'myriad': ['Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       },

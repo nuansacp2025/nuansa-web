@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-orange-50">
+    <main className="min-h-screen">
       <section className="relative w-full py-12 px-16 overflow-hidden md:py-20 md:px-0">
         <Image src={"/images/our-team/what-we-do.png"} alt="What We Do" fill={true} objectFit="cover" />
         <div className="relative w-full flex flex-col items-center md:flex-row">
@@ -13,7 +13,7 @@ export default function Page() {
             </h2>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center gap-4 md:items-start md:pr-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-200">
+            <h2 className="text-3xl md:text-4xl font-bold text-orange-a">
               What We Do
             </h2>
             <p className="text-lg md:text-xl text-white">
@@ -24,10 +24,10 @@ export default function Page() {
       </section>
       
       <section className="w-full flex flex-col items-center py-12 px-16 md:py-20 md:px-32">
-        <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-lime-950">
+        <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-green-a">
           Divisions and Tasks
         </h2>
-        <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-lime-950">
+        <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
           Members
         </h3>
         <div className="grid gap-8 place-content-center place-items-stretch grid-cols-[minmax(0,_350px)] md:grid-cols-[repeat(2,_minmax(0,_350px))] lg:grid-cols-[repeat(3,_minmax(0,_350px))] md:gap-16">

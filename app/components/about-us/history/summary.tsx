@@ -8,7 +8,7 @@ interface HistorySummaryProps {
 export default function HistorySummary({ title, description }: HistorySummaryProps) {
     return (
         <div className="text-left space-y-2 p-4 bg-transparent shadow-md rounded-lg">
-            <h2 className="text-3xl font-bold text-[#ECBF7F] font-poppins text-justify">
+            <h2 className="text-3xl font-bold text-orange-a font-poppins text-justify">
                 {title}
             </h2>
             <p className="text-white font-poppins text-2xl text-justify">
