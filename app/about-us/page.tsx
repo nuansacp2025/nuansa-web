@@ -18,7 +18,7 @@ export default function AboutUs() {
       {
         /*
         To test the modal overlay, uncomment below
-        */
+        
         
         isModalOpen && 
         <ModalOverlay onClose={onClose}>
@@ -38,7 +38,7 @@ export default function AboutUs() {
             </p>
           </div>
         </ModalOverlay>
-        
+        */
       }
       {/* What is Nuansa section */}
       <section className="text-center py-12 px-4 md:px-10">
@@ -123,7 +123,8 @@ export default function AboutUs() {
 
         {/* Video section */}
         <div className="flex flex-col md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
-          <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show {">>"}</h1>
+          <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show<span className="hidden md:inline">{">>"}</span>
+          </h1>
           <VideoFrame
             videoTitle="RickRoll"
             videoSrc="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tSGI-Y2bIM5CKrxI"
