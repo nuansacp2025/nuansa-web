@@ -8,13 +8,15 @@ export default function BusinessForm() {
     const [category, setCategory] = useState("");
     const [message, setMessage] = useState("");
 
+    const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+
     return (
         <div className="w-full flex flex-col gap-y-4">
             <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Contact Us</h2>
                 <p className="text-md sm:text-lg my-4">Feel free to reach out through the form below!</p>
             </div>
-            <form action="#" className="w-full">
+            <form action={`https://formsubmit.co/${formSubmitKey}`} method="POST" className="w-full" encType="multipart/form-data">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-6">
                     <div className="col-span-2">
                         <label htmlFor="name" className="text-md sm:text-lg">Name</label>
@@ -40,7 +42,7 @@ export default function BusinessForm() {
                     </div>
                     <div className="col-span-2">
                     <label htmlFor="proposal" className="text-md sm:text-lg">Corporate Proposal (PDF)</label>
-                        <input type="file" id="proposal" name="proposal" value={category} onChange={(e) => setCategory(e.target.value)} required
+                        <input type="file" id="proposal" name="file" value={category} onChange={(e) => setCategory(e.target.value)} required accept=".pdf"
                                className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                     </div>
                     <div className="col-span-2">
