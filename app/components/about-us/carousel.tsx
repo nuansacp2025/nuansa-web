@@ -19,6 +19,7 @@ export default function Carousel({ children }: CarouselProps) {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+    setWindowWidth(window.innerWidth);
 
     window.addEventListener('resize', handleResize);
     
