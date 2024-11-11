@@ -13,8 +13,8 @@ export default function BusinessForm() {
     return (
         <div className="w-full flex flex-col gap-y-4">
             <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Contact Us</h2>
-                <p className="text-md sm:text-lg my-4">Feel free to reach out through the form below!</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Business Inquiry</h2>
+                <p className="text-md sm:text-lg my-4">We appreciate your interest in partnering with NUANSA. Our team is ready to assist.</p>
             </div>
             <form action={`https://formsubmit.co/${formSubmitKey}`} method="POST" className="w-full" encType="multipart/form-data">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-6">
