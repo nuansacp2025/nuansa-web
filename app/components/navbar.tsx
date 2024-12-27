@@ -2,26 +2,49 @@
 
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
+import { MdArrowDropDown, MdArrowDropUp, MdMenu, MdClose } from 'react-icons/md';
 
 const NavbarItem = ({ href, label, children }: { href: string, label: string, children?: ReactNode }) => {
-  const [dropdownHidden, setDropdownHidden] = React.useState(true);
-  const [dropdownOnHover, setDropdownOnHover] = React.useState(false);
+  const isHovered = React.useRef(false);
+  const [dropdownHidden, setDropdownHidden] = React.useState(true);  // state for desktop layout (using hover)
+  const [mobileDropdownHidden, setMobileDropdownHidden] = React.useState(true);  // state for mobile layout (using click)
 
   return (
     <div
-      className="relative"
-      onMouseEnter={children ? () => setTimeout(() => setDropdownHidden(false), 300) : undefined}
-      onMouseLeave={children ? () => setTimeout(() => setDropdownHidden(true), 300) : undefined}
+      className="relative flex flex-col"
+      onMouseEnter={children ? () => {
+        isHovered.current = true;
+        setTimeout(() => {setDropdownHidden(!isHovered.current)}, 250);
+      } : undefined}
+      onMouseLeave={children ? () => {
+        isHovered.current = false
+        setTimeout(() => {setDropdownHidden(!isHovered.current)}, 250);
+      } : undefined}
     >
-      <Link href={href} className="text-sm font-semibold leading-6 text-white lg:text-gray-0">
-        {label}
-      </Link>
+      <div className="flex items-center self-stretch">
+        <Link href={href} className="p-4 flex-1">
+          <span className="text-sm font-semibold leading-6 text-white">
+            {label}
+          </span>
+        </Link>
+        {children && (
+          <div
+            className="p-4 cursor-pointer text-white text-xl leading-6 md:hidden"
+            onClick={() => {setMobileDropdownHidden(!mobileDropdownHidden)}}
+            >
+            {mobileDropdownHidden ? <MdArrowDropDown /> : <MdArrowDropUp />}
+          </div>
+        )}
+      </div>
+      
       {children && (
-        <div
-          className={`absolute ${(dropdownHidden && !dropdownOnHover) ? "hidden" : "flex"} flex-col p-2 items-stretch -left-4 top-full z-10 mt-4 w-screen max-w-xs overflow-hidden rounded-lg bg-white shadow-md`}
-          onMouseEnter={() => setDropdownOnHover(true)}
-          onMouseLeave={() => setDropdownOnHover(false)}
-        >
+        <div className={`
+          ${mobileDropdownHidden ? "hidden" : "flex"}
+          ${dropdownHidden ? "md:hidden" : "md:flex"}
+          flex-col items-stretch w-full pl-4 md:p-2
+          md:absolute md:w-screen md:max-w-xs md:-left-1 md:z-10 md:-mt-2 md:top-full
+          md:rounded-lg md:bg-white md:shadow-md
+          `}>
           {children}
         </div>
       )}
@@ -32,7 +55,11 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
 const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactNode }) => {
   return (
     <Link href={href}>
-      <div className="flex items-center rounded-md p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50">
+      <div className="
+        flex items-center rounded-md p-2
+        text-sm font-normal leading-6 text-white
+        md:font-semibold md:text-gray-900 md:hover:bg-gray-50
+        ">
         {children}
       </div>
     </Link>
@@ -40,27 +67,41 @@ const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactN
 }
 
 const Navbar = () => {
-  const [aboutUsHidden, setAboutUsHidden] = React.useState(true);
-  const [aboutUsOnHover, setAboutUsOnHover] = React.useState(false);
+  const [mobileMenuHidden, setMobileMenuHidden] = React.useState(true);
 
   return (
-    <nav className="flex items-center justify-center p-6 lg:px-8 ">
-      <div
-        className={`fixed inset-0 z-10 bg-gray-800 bg-opacity-75 transition-opacity lg:relative lg:flex lg:gap-x-12 lg:bg-transparent opacity-100`}
-      >
-        <div className="flex flex-col lg:flex-row lg:gap-x-12 lg:items-center lg:justify-center p-4 lg:p-0">
-          <NavbarItem href="/" label="Home" />
-          <NavbarItem href="/about-us" label="About Us">
-            <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
-          </NavbarItem>
-          <NavbarItem href="/our-team" label="Our Team">
-            <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
-            <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
-            <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
-          </NavbarItem>
-          <NavbarItem href="/contact-us" label="Contact Us" />
+    <nav className="flex sticky top-0 h-[72] shadow-lg items-center justify-between bg-green-a p-2 md:p-0 z-10">
+      <div>
+        <span className="md:hidden ml-4 text-2xl text-white font-bold leading-8">
+          NUANSA
+        </span>
+      </div>
+      <div className={`
+        ${mobileMenuHidden ? "hidden" : "flex"}
+        absolute h-max inset-0 top-full z-10 md:relative md:flex md:top-0 
+        flex-col p-2 md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
+        bg-green-b md:bg-inherit
+        `}>
+        <NavbarItem href="/" label="Home" />
+        <NavbarItem href="/about-us" label="About Us">
+          <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
+        </NavbarItem>
+        <NavbarItem href="/our-team" label="Our Team">
+          <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
+          <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
+          <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
+        </NavbarItem>
+        <NavbarItem href="/contact-us" label="Contact Us" />
+      </div>
+      <div>
+        <div
+          className="md:hidden p-4 cursor-pointer text-white text-xl leading-6"
+          onClick={() => {setMobileMenuHidden(!mobileMenuHidden)}}
+          >
+          {mobileMenuHidden ? <MdMenu /> : <MdClose />}
         </div>
       </div>
+      
     </nav>
   );
 };
