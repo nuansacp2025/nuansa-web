@@ -14,7 +14,7 @@ export default function TeamCard({ imageSrc, name, href }: TeamCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-      className="relative md:flex-1 h-[200] rounded-md shadow-md overflow-hidden md:max-w-[300]"
+      className="relative md:flex-1 h-[200px] rounded-md shadow-md overflow-hidden md:max-w-[300px]"
     >
       <Image src={imageSrc} alt={name} fill={true} objectFit="cover" />
       <Link href={href}>
