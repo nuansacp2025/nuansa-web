@@ -1,9 +1,9 @@
 /**
- * Contains React components to wrap other components in framer-motion animations.
+ * Contains React components to wrap other components in motion/react animations.
  */
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // TODO: add type checking
 // @ts-ignore
