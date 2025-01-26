@@ -1,7 +1,7 @@
 "use client";
 
 import {useEffect} from "react";
-import {useAnimationControls, useScroll, motion, Variants} from "framer-motion";
+import {useAnimationControls, useScroll, motion, Variants} from "motion/react";
 import {FaArrowAltCircleUp, FaArrowCircleUp, FaArrowUp} from "react-icons/fa"
 
 const isBrowser = () => typeof window != 'undefined';

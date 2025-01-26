@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import HistorySummary from '@/app/components/about-us/history/summary';
 import Timeline from '@/app/components/about-us/history/timeline';
 import VideoFrame from '@/app/components/about-us/history/video-frame';
