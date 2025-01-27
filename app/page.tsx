@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import Timer from "./components/timer";
 import { FadeInDiv } from "./components/animations";
 
@@ -48,6 +49,23 @@ export default function Home() {
               The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly. 
             </p>
           </div>
+        </div>
+      </FadeInDiv>
+      <FadeInDiv className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30 bg-transparent">
+        <h3 className="text-center text-xl md:text-2xl p-4 md:p-6">
+          Have a question or need assistance? Interested in partnering with NUANSA?
+        </h3>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
+          <Link href="/contact-us#general-form">
+            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              General Inquiry
+            </button>
+          </Link>
+          <Link href="/contact-us#business-form">
+            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Business Inquiry
+            </button>
+          </Link>
         </div>
       </FadeInDiv>
       <footer className="w-full py-4 text-center text-white">
