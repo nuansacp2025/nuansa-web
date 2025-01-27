@@ -2,6 +2,7 @@
 
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
+import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { MdArrowDropDown, MdArrowDropUp, MdMenu, MdClose } from 'react-icons/md';
 
 const NavbarItem = ({ href, label, children }: { href: string, label: string, children?: ReactNode }) => {
@@ -69,8 +70,20 @@ const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactN
 const Navbar = () => {
   const [mobileMenuHidden, setMobileMenuHidden] = React.useState(true);
 
+  const { scrollY } = useScroll();
+  const [scrollingDown, setScrollingDown] = React.useState(true);
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const diff = current - (scrollY.getPrevious() ?? 0);
+    setScrollingDown(diff > 0);
+  })
+
   return (
-    <nav className="flex sticky top-0 h-[72px] shadow-lg items-center justify-between bg-green-a p-2 md:p-0 z-10">
+    <motion.nav className="flex sticky top-0 h-[72px] shadow-lg items-center justify-between bg-green-a p-2 md:p-0 z-10"
+      initial={{ y: 0 }}
+      animate={{ y: scrollingDown ? 0 : -72 }}
+      transition={{ duration: 0.2 }}
+    >
       <div>
         <span className="md:hidden ml-4 text-2xl text-white font-bold leading-8">
           NUANSA
@@ -103,7 +116,7 @@ const Navbar = () => {
         </div>
       </div>
       
-    </nav>
+    </motion.nav>
   );
 };
 
