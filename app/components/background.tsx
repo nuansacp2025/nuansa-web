@@ -6,25 +6,38 @@ import React, { useEffect, useState } from "react";
 
 interface BackgroundProps {
     src: string;
+    width: number;
     height: number;
 }
 
-export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, height }) => {
+export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, height }) => {
     const {scrollY} = useScroll();
     const [marginTop, setMarginTop] = useState('0px');
     const [marginBot, setMarginBot] = useState('0px');
-    const [width, setWidth] = useState(0);
+    const [windowWidth, setWidth] = useState(0);
     useEffect(() => {
-        var temp = window.scrollY / (document.body.scrollHeight - window.innerHeight) * (height - window.innerHeight);
-        setMarginTop(`-${temp}px`);
-        setMarginBot(`-${height - window.innerHeight - temp}px`);
+        const backgroundHeight = height * window.innerWidth / width;
+        if (backgroundHeight < window.innerHeight) {
+            setMarginTop('0px');
+            setMarginBot('0px');
+        }
+        const temp = -1 * window.scrollY / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
+        setMarginTop(`${temp}px`);
+        setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
         setWidth(window.innerWidth);
     })
     useEffect(() => {
         return scrollY.on('change', (latestValue) => {
-            var temp = latestValue / (document.body.scrollHeight - window.innerHeight) * (height - window.innerHeight);
-            setMarginTop(`-${temp}px`);
-            setMarginBot(`-${height - window.innerHeight - temp}px`);
+            const backgroundHeight = height * window.innerWidth / width;
+            if (backgroundHeight < window.innerHeight) {
+                setMarginTop('0px');
+                setMarginBot('0px');
+            }
+            const temp = -1 * latestValue / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
+            console.log(backgroundHeight);
+            console.log(temp);
+            setMarginTop(`${temp}px`);
+            setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
             setWidth(window.innerWidth);
         });
     });
@@ -39,7 +52,7 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, height })
             `}
             </style>
             <div className="fixed inset-0 -z-10 overflow-hidden img">
-                <Image src={src} alt="Background" fill priority={true} />
+                <Image src={src} alt="Background" fill priority={false} />
             </div>
         </>
     );
