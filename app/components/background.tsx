@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import { useScroll } from "motion/react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export const ScrollableBackground = ({ src, height }) => {
+interface BackgroundProps {
+    src: string;
+    height: number;
+}
+
+export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, height }) => {
     const {scrollY} = useScroll();
     const [marginTop, setMarginTop] = useState('0px');
     const [marginBot, setMarginBot] = useState('0px');
