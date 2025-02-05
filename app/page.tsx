@@ -5,6 +5,7 @@ import Link from "next/link";
 import Timer from "./components/timer";
 
 import { FadeInDiv } from "./components/animations";
+import { ScrollableBackground } from "./components/background";
 import SponsorGrid from "./components/sponsor-grid";
 
 
@@ -29,9 +30,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 text-white">
-      <div className="fixed inset-0 -z-10">
-        <Image src={'/images/home/background.png'} alt={'Background'} layout="fill" objectFit="cover" quality={100} />
-      </div>
+      <ScrollableBackground src={'/images/home/background.png'} height={1920} width={1080} />
       <FadeInDiv className="flex flex-col items-center justify-center h-screen w-full">
         <Image src={'/images/home/the-crying-stone.png'} alt={'The Crying Stone'} width={0} height={0} sizes="100vw" style={{ width: '24rem', height: 'auto' }}/>
         <Timer launchDate="09-07-2025" />
