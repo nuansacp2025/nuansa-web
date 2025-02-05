@@ -25,7 +25,7 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, he
         setMarginTop(`${temp}px`);
         setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
         setWidth(window.innerWidth);
-    })
+    }, [height, width]);
     useEffect(() => {
         return scrollY.on('change', (latestValue) => {
             const backgroundHeight = height * window.innerWidth / width;
@@ -40,7 +40,7 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, he
             setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
             setWidth(window.innerWidth);
         });
-    });
+    }, [height, scrollY, width]);
     return (
         <>
             <style jsx>
