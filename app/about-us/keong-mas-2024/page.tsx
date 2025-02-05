@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { FadeInDiv } from "@/app/components/animations";
 import Gallery from "@/app/components/about-us/keong-mas-2024/gallery";
 import MainCast from "@/app/components/about-us/keong-mas-2024/main-casts";
+import { ScrollableBackground } from "@/app/components/background";
 
 export default function AboutUsKeongMasPage() {
   const [castData, setCastData] = useState<CastMember[]>([]);
@@ -31,6 +32,7 @@ export default function AboutUsKeongMasPage() {
 
   return (
     <main className="min-h-screen">
+      <ScrollableBackground src='/images/about-us/background.png' height={1920} width={1080} />
       <section className="w-full flex flex-col items-center py-12 px-16 md:py-20 md:px-32">
         <FadeInDiv>
           <h2 className="text-4xl md:text-5xl pb-6 md:pb-8 font-bold">

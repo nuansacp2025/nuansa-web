@@ -3,10 +3,12 @@
 import Image from "next/image";
 import TeamCard from "../components/our-team/team-card";
 import { FadeInDiv } from "../components/animations";
+import { ScrollableBackground } from "../components/background";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-green-a">
+    <main className="min-h-screen">
+      <ScrollableBackground src={'/images/our-team/background.png'} height={1920} width={1080} />
       <section className="py-12 px-16 md:py-20 md:px-32">
         <FadeInDiv className="w-full flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-orange-a">
