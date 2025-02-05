@@ -49,7 +49,85 @@
                             "src": "https://www.youtube.com/embed/K851vIUK37Q?si=2L511iw_34ZRs0BP"
                         }
                     }
-                ]
+                ],
+                "keong-mas-2024": {
+                    "main-casts": [
+                        {
+                            "name": "Robert Downey Jr.",
+                            "character": "Tony Stark / Iron Man",
+                            "image": "/images/characters/ironman.png",
+                            "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man."
+                        },
+                        {
+                            "name": "Chris Evans",
+                            "character": "Steve Rogers / Captain America",
+                            "image": "/images/characters/captain_america.png",
+                            "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people."
+                        },
+                        {
+                            "name": "Scarlett Johansson",
+                            "character": "Natasha Romanoff / Black Widow",
+                            "image": "/images/characters/black_widow.png",
+                            "description": "The one who always stand for what's right, the one who always fight for the people."
+                        }
+                    ],
+                    "gallery": [
+                        [
+                            {
+                                "src": "/images/our-team/what-we-do.png",
+                                "alt": "What We Do"
+                            },
+                            {
+                                "src": "/images/our-team/find-out-more.png",
+                                "alt": "Find Out More"
+                            },
+                            {
+                                "src": "/images/our-team/structure.png",
+                                "alt": "Structure"
+                            },
+                            {
+                                "src": "/images/logo/nuansa_logo.png",
+                                "alt": "NUANSA Logo"
+                            }
+                        ],
+                        [
+                            {
+                                "src": "/images/our-team/what-we-do.png",
+                                "alt": "What We Do"
+                            },
+                            {
+                                "src": "/images/our-team/find-out-more.png",
+                                "alt": "Find Out More"
+                            },
+                            {
+                                "src": "/images/our-team/structure.png",
+                                "alt": "Structure"
+                            },
+                            {
+                                "src": "/images/logo/nuansa_logo.png",
+                                "alt": "NUANSA Logo"
+                            }
+                        ],
+                        [
+                            {
+                                "src": "/images/our-team/what-we-do.png",
+                                "alt": "What We Do"
+                            },
+                            {
+                                "src": "/images/our-team/find-out-more.png",
+                                "alt": "Find Out More"
+                            },
+                            {
+                                "src": "/images/our-team/structure.png",
+                                "alt": "Structure"
+                            },
+                            {
+                                "src": "/images/logo/nuansa_logo.png",
+                                "alt": "NUANSA Logo"
+                            }
+                        ]
+                    ]
+                }
             }
         }
     }
