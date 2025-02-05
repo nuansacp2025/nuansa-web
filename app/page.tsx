@@ -4,7 +4,7 @@ import Image from "next/image";
 import Timer from "./components/timer";
 
 import { FadeInDiv } from "./components/animations";
-import SponsorGrid from "./components/SponsorGrid";
+import SponsorGrid from "./components/sponsor-grid";
 
 
 export default function Home() {
