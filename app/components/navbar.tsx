@@ -1,7 +1,9 @@
 "use client";
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
+import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { MdArrowDropDown, MdArrowDropUp, MdMenu, MdClose } from 'react-icons/md';
 
 const NavbarItem = ({ href, label, children }: { href: string, label: string, children?: ReactNode }) => {
@@ -69,8 +71,29 @@ const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactN
 const Navbar = () => {
   const [mobileMenuHidden, setMobileMenuHidden] = React.useState(true);
 
+  const pathname = usePathname();
+  const { scrollY } = useScroll();
+  const [navbarHidden, setNavbarHidden] = React.useState("visible");
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const diff = current - (scrollY.getPrevious() ?? 0);
+    if (pathname === "/") {
+      setNavbarHidden(current > window.innerHeight ? "visible" : "hidden");
+    } else {
+      setNavbarHidden(diff > 0 && current > 100 ? "hidden" : "visible");
+    }
+  })
+  useEffect(() => {
+    setNavbarHidden(pathname === "/" ? "hidden" : "visible");
+  }, [pathname]);
+
   return (
-    <nav className="flex sticky top-0 h-[72px] shadow-lg items-center justify-between bg-green-a p-2 md:p-0 z-10">
+    <motion.nav
+      className="flex sticky top-0 h-[72px] shadow-lg items-center justify-between bg-green-a p-2 md:p-0 z-10"
+      animate={navbarHidden}
+      variants={{visible: { y: 0 }, hidden: { y: "-100%" }}}
+      transition={{ duration: 0.2 }}
+    >
       <div>
         <span className="md:hidden ml-4 text-2xl text-white font-bold leading-8">
           NUANSA
@@ -103,7 +126,7 @@ const Navbar = () => {
         </div>
       </div>
       
-    </nav>
+    </motion.nav>
   );
 };
 
