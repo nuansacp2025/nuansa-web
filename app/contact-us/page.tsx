@@ -19,7 +19,7 @@ export default function ContactPage() {
                            style={{ width: '12rem', height: 'auto' }}/>
                 </div>
             </FadeInDiv>
-            <FadeInDiv className="sm:grid sm:grid-cols-2 bg-orange-a rounded-md text-black bottom-8 p-10">
+            <FadeInDiv id="business-form" className="sm:grid sm:grid-cols-2 bg-orange-a rounded-md text-black bottom-8 p-10" style={{ scrollMarginTop: '80px' }}>
                 <div className="sm:place-self-center hidden sm:block">
                     <Image src={'/images/contact-us/business_inquiry.png'} alt={'logo'} width={0} height={0} sizes="100vw"
                            style={{width: '12rem', height: 'auto'}}/>
