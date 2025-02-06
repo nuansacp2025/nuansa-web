@@ -44,11 +44,6 @@ export default function BusinessForm() {
                         </select>
                     </div>
                     <div className="col-span-2">
-                    <label htmlFor="proposal" className="text-md sm:text-lg">Corporate Proposal (PDF)</label>
-                        <input type="file" id="proposal" name="file" value={category} onChange={(e) => setCategory(e.target.value)} required accept=".pdf"
-                               className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
-                    </div>
-                    <div className="col-span-2">
                         <label htmlFor="message" className="text-md sm:text-lg">Message</label>
                         <div>
                             <textarea name="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)} className="resize-none block w-full rounded-md h-40 border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"></textarea>
