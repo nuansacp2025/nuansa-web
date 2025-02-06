@@ -9,6 +9,7 @@ export default function GeneralForm() {
     const [message, setMessage] = useState("");
 
     const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+    const formSubmitSuccessUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL + "?success=true";
 
     return (
         <div className="w-full flex flex-col gap-y-4">
@@ -17,6 +18,7 @@ export default function GeneralForm() {
                 <p className="text-md sm:text-lg my-4">Have a question or need assistance? We&apos;re here to help! Feel free to reach out to us with any inquiries!</p>
             </div>
             <form action={`https://formsubmit.co/${formSubmitKey}`} method="POST" className="w-full">
+                <input type="hidden" name="_next" value={formSubmitSuccessUrl}></input>
                 <div className="grid grid-cols-2 gap-x-8 gap-y-6">
                     <div className="col-span-2">
                         <label htmlFor="name" className="text-md sm:text-lg">Name</label>
