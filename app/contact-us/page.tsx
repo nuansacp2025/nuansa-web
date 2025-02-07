@@ -29,12 +29,12 @@ function SuccessMessage() {
 
 export default function ContactPage() {
     return (
-        <div className="items-center bg-green-a space-y-20 px-4 md:px-12 lg:px-16 pb-12">
+        <div className="items-center px-4 md:px-12 lg:px-16 pb-12">
             <Suspense>
                 <SuccessMessage/>
             </Suspense>
             <ScrollableBackground src={'/images/contact-us/background.png'} height={1920} width={1080} />
-            <FadeInDiv className="sm:grid sm:grid-cols-2 text-white py-10">
+            <FadeInDiv id="general-form" className="sm:grid sm:grid-cols-2 text-white p-10">
                 <div className="sm:place-self-center mx-auto my-auto">
                     <GeneralForm/>
                 </div>
