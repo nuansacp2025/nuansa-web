@@ -29,7 +29,7 @@ function SuccessMessage() {
 
 export default function ContactPage() {
     return (
-        <div className="items-center bg-green-a space-y-20 px-4 md:px-12 lg:px-16 pb-12">
+        <div className="items-center px-4 md:px-12 lg:px-16 pb-12">
             <Suspense>
                 <SuccessMessage/>
             </Suspense>

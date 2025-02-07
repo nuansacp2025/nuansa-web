@@ -15,7 +15,7 @@ export default function AboutUs() {
 
 
   return (
-    <div className="pt-12">
+    <div>
       {
         /*
         To test the modal overlay, uncomment below
@@ -42,10 +42,10 @@ export default function AboutUs() {
         */
       }
       {/* What is Nuansa section */}
-      <section className="text-center py-12 px-4 md:px-10">
+      <section className="text-center py-24 px-4 md:px-10 bg-orange-a">
         <FadeInDiv>
           <h1 className="text-4xl font-bold mb-4">What is &quot;Nuansa&quot;</h1>
-          <p className="text-lg mb-8">
+          <p className="text-lg">
             An annual arts and cultural event by a group of Indonesian students in NUS.
             It aims to promote the rich and diverse cultures of Indonesia.
           </p>
@@ -53,7 +53,7 @@ export default function AboutUs() {
       </section>
 
       {/* Fun Fact Section */}
-      <section className="text-center py-12 px-4 md:px-20 bg-orange-a w-full flex flex-col md:flex-row items-center justify-center">
+      <section className="text-center py-12 px-4 md:px-20 w-full flex flex-col md:flex-row items-center justify-center">
         <FadeInDiv>
           <h2 className="text-3xl mb-8 text-green-a">Fun Fact</h2>
         </FadeInDiv>
@@ -66,7 +66,7 @@ export default function AboutUs() {
       </section>
 
       {/* Vision and Mission Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-orange-a gap-8 py-12 px-4 md:px-10 text-green-a">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-4 md:px-10 text-green-a">
         <FadeInDiv className="text-left">
           <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
           <p className="text-lg">
@@ -106,7 +106,7 @@ export default function AboutUs() {
           </div>
         </FadeInDiv>
       </section>
-      <section className="text-center py-12 bg-orange-a">
+      <section className="text-center py-12">
         {/* Flex container for Why Join Us section */}
         <FadeInDiv>
           <div className="flex flex-col-reverse md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">

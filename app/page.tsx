@@ -77,12 +77,12 @@ export default function Home() {
         </h3>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
           <Link href="/contact-us#general-form">
-            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
               General Inquiry
             </button>
           </Link>
           <Link href="/contact-us#business-form">
-            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
               Business Inquiry
             </button>
           </Link>
