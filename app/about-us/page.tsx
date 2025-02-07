@@ -52,19 +52,6 @@ export default function AboutUs() {
         </FadeInDiv>
       </section>
 
-      {/* Fun Fact Section */}
-      <section className="text-center py-12 px-4 md:px-20 w-full flex flex-col md:flex-row items-center justify-center">
-        <FadeInDiv>
-          <h2 className="text-3xl mb-8 text-green-a">Fun Fact</h2>
-        </FadeInDiv>
-        <FadeInDiv className="flex-grow px-4 md:px-20">
-          <FunFact>
-            <h2 className="text-3xl mb-8 text-green-a">Fun Fact</h2>
-            <h2 className="text-3xl mb-8 text-green-a">Fun Fict</h2>
-          </FunFact>
-        </FadeInDiv>
-      </section>
-
       {/* Vision and Mission Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-4 md:px-10 text-green-a">
         <FadeInDiv className="text-left">
@@ -88,17 +75,17 @@ export default function AboutUs() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-y-8 md:gap-x-20">
             <Carousel>
               <img 
-                src="https://media.licdn.com/dms/image/v2/D5622AQEyPzD7WAMiyA/feedshare-shrink_800/feedshare-shrink_800/0/1726034259793?e=2147483647&v=beta&t=yYGRAZoKbJV0xHLg8XkpiB2QF7J_g1hs02U5lFw_ziU" 
+                src="images/about-us/NuansaHistory_2019.jpg" 
                 alt="Some Memorable Clips"
                 className="max-h-[200px] object-contain"
               />
               <img 
-                src="https://media.licdn.com/dms/image/v2/D5622AQEyPzD7WAMiyA/feedshare-shrink_800/feedshare-shrink_800/0/1726034259793?e=2147483647&v=beta&t=yYGRAZoKbJV0xHLg8XkpiB2QF7J_g1hs02U5lFw_ziU" 
+                src="images/about-us/NuansaHistory_2018.jpg" 
                 alt="Some Memorable Clips" 
                 className="max-h-[200px] object-contain"
               />
               <img 
-                src="https://media.licdn.com/dms/image/v2/D5622AQEyPzD7WAMiyA/feedshare-shrink_800/feedshare-shrink_800/0/1726034259793?e=2147483647&v=beta&t=yYGRAZoKbJV0xHLg8XkpiB2QF7J_g1hs02U5lFw_ziU" 
+                src="images/about-us/NuansaHistory_2017.jpg" 
                 alt="Some Memorable Clips" 
                 className="max-h-[200px] object-contain"
               />
@@ -134,11 +121,11 @@ export default function AboutUs() {
         {/* Video section */}
         <FadeInDiv>
           <div className="flex flex-col md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
-            <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show<span className="hidden md:inline">{">>"}</span>
+            <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show <span className="hidden md:inline">{">>"}</span>
             </h1>
             <VideoFrame
-              videoTitle="RickRoll"
-              videoSrc="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tSGI-Y2bIM5CKrxI"
+              videoTitle="NUANSA 2024"
+              videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
             />
           </div>
         </FadeInDiv>
