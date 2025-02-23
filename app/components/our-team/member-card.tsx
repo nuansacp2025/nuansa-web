@@ -8,7 +8,7 @@ interface MemberCardProps {
 
 export default function MemberCard({ imageSrc, name, role }: MemberCardProps) {
   return (
-    <div className="max-w-[350px] flex flex-col bg-white rounded-md shadow-md overflow-hidden">
+    <div data-testid="member-card" className="max-w-[350px] flex flex-col bg-white rounded-md shadow-md overflow-hidden">
       <div className="relative aspect-square">
         <Image src={imageSrc} alt={name} fill={true} objectFit="cover" />
       </div>

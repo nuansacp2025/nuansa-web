@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="flex items-center bg-green-b justify-start px-8 py-4 lg:justify-between z-10">
+    <div role="footer" className="flex items-center bg-green-b justify-start px-8 py-4 lg:justify-between z-10">
       <div className="flex items-center gap-x-4">
         <Link href="https://www.facebook.com/nuansa.culturalproductions/">
           <Image src="/images/logo/facebook.svg" width={20} height={20} alt="Facebook" />
@@ -11,7 +11,7 @@ const Footer = () => {
         <Link href="https://www.instagram.com/nuansacp/">
           <Image src="/images/logo/instagram.svg" width={20} height={20} alt="Instagram" />
         </Link>
-        <Link href="https://www.youtube.com/@NUANSAcp">
+        <Link href="https://www.youtube.com/@NUANSAcp/">
           <Image src="/images/logo/youtube.svg" width={20} height={20} alt="Youtube" />
         </Link>
       </div>
