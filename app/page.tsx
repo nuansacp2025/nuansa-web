@@ -5,35 +5,38 @@ import Link from "next/link";
 import Timer from "./components/timer";
 
 import { FadeInDiv } from "./components/animations";
+<<<<<<< HEAD
+=======
+import { ScrollableBackground } from "./components/background";
+>>>>>>> 6312449f8f6776f347e807b92fff6e13d893c556
 import SponsorGrid from "./components/sponsor-grid";
 
 
 export default function Home() {
   const sponsorImages: string[] = [
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
-"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
+"https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+"https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+"https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+"https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
+"https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+"https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+"https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+"https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
+"https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+"https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+"https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+"https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
 
 ];
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 text-white">
-      <div className="fixed inset-0 -z-10">
-        <Image src={'/images/home/background.png'} alt={'Background'} layout="fill" objectFit="cover" quality={100} />
-      </div>
+      <ScrollableBackground src={'/images/home/background.png'} height={1920} width={1080} />
       <FadeInDiv className="flex flex-col items-center justify-center h-screen w-full">
-        <Image src={'/images/home/the-crying-stone.png'} alt={'The Crying Stone'} width={0} height={0} sizes="100vw" style={{ width: '24rem', height: 'auto' }}/>
+        <Image src={'/images/home/the-crying-stone.png'} alt={'The Crying Stone'} width={0} height={0} sizes="100vw" style={{ width: '32rem', height: 'auto', marginTop: '-160px' }}/>
         <Timer launchDate="09-07-2025" />
       </FadeInDiv>
       <FadeInDiv className="flex flex-col items-center justify-center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32 bg-transparent">
@@ -78,12 +81,12 @@ export default function Home() {
         </h3>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
           <Link href="/contact-us#general-form">
-            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
               General Inquiry
             </button>
           </Link>
           <Link href="/contact-us#business-form">
-            <button className="block w-64 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
               Business Inquiry
             </button>
           </Link>
