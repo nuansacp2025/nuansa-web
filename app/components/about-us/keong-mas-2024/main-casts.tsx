@@ -13,7 +13,7 @@ const MainCast: React.FC<CastProps> = ({ cast }) => {
           key={index}
           data-testid="cast-card"
           className="w-full sm:w-80 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-green-a dark:border-gray-700 
-                     transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                     transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer hover:z-10"
         >
           <div className="relative w-full h-64">
             <Image

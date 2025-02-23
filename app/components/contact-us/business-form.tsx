@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function BusinessForm() {
     const [name, setName] = useState("");
@@ -8,9 +8,16 @@ export default function BusinessForm() {
     const [category, setCategory] = useState("");
     const [message, setMessage] = useState("");
 
-    const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+    const [formSubmitKey, setFormSubmitKey] = useState(process.env.NEXT_PUBLIC_TICKETING_EMAIL!);
     const formSubmitSuccessUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL + "?success=true";
 
+    useEffect(() => {
+        if (category === "ticketing") {
+            setFormSubmitKey(process.env.NEXT_PUBLIC_TICKETING_EMAIL!);
+        } else if (category === "sponsorship") {
+            setFormSubmitKey(process.env.NEXT_PUBLIC_SPONSORSHIP_EMAIL!);
+        }
+    }, [category]);
 
     return (
         <div className="w-full flex flex-col gap-y-4">
@@ -38,9 +45,16 @@ export default function BusinessForm() {
                     </div>
                     <div className="col-span-2">
                         <label htmlFor="category" className="text-md sm:text-lg text-green-a">Category</label>
-                        <select id="category" name="category" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-b sm:text-sm sm:leading-6 focus:outline-none" required>
-                            <option value="ticket-enquiries">Ticket Enquiries</option>
-                            <option value="sponsorship-enquiries">Sponsorship Enquiries</option>
+                        <select
+                            id="category"
+                            name="category"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-b sm:text-sm sm:leading-6 focus:outline-none"
+                            required
+                        >
+                            <option value="ticketing">Ticket Enquiries</option>
+                            <option value="sponsorship">Sponsorship Enquiries</option>
                         </select>
                     </div>
                     <div className="col-span-2">
@@ -57,5 +71,5 @@ export default function BusinessForm() {
                 </div>
             </form>
         </div>
-    )
+    );
 }

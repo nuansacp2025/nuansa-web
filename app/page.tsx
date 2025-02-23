@@ -5,10 +5,7 @@ import Link from "next/link";
 import Timer from "./components/timer";
 
 import { FadeInDiv } from "./components/animations";
-<<<<<<< HEAD
-=======
 import { ScrollableBackground } from "./components/background";
->>>>>>> 6312449f8f6776f347e807b92fff6e13d893c556
 import SponsorGrid from "./components/sponsor-grid";
 
 

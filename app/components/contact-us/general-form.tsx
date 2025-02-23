@@ -8,7 +8,7 @@ export default function GeneralForm() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
-    const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+    const formSubmitKey = process.env.NEXT_PUBLIC_PD_EMAIL;
     const formSubmitSuccessUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL + "?success=true";
 
     return (
