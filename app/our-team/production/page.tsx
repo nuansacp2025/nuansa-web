@@ -1,6 +1,6 @@
 "use client"
 
-import MemberCard from "@/app/components/our-team/member-card";
+import GroupCard from "@/app/components/our-team/group-card";
 import Image from "next/image";
 import { FadeInDiv } from "@/app/components/animations";
 
@@ -37,12 +37,8 @@ export default function Page() {
             Members
           </h3>
         </FadeInDiv>
-        <FadeInDiv className="grid gap-8 place-content-center place-items-stretch grid-cols-[minmax(0,_350px)] md:grid-cols-[repeat(2,_minmax(0,_350px))] lg:grid-cols-[repeat(3,_minmax(0,_350px))] md:gap-16">
-          <MemberCard imageSrc="/images/our-team/member-placeholder.png" name="Member Name 1" role="Role 1" />
-          <MemberCard imageSrc="/images/our-team/member-placeholder.png" name="Member Name 2" role="Role 2" />
-          <MemberCard imageSrc="/images/our-team/member-placeholder.png" name="Member Name 3" role="Role 3" />
-          <MemberCard imageSrc="/images/our-team/member-placeholder.png" name="Member Name 4" role="Role 4" />
-          <MemberCard imageSrc="/images/our-team/member-placeholder.png" name="Member Name 5" role="Role 5" />
+        <FadeInDiv className="w-full flex items-center justify-center">
+          <GroupCard imageSrc="/images/our-team/what-we-do.png" name="Artistic Team"/>
         </FadeInDiv>
       </section>
     </main>
