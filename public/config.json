@@ -119,6 +119,100 @@
                         ]
                     ]
                 }
+            },
+            "contact-us": {
+                "background": {
+                    "src": "/images/contact-us/background.png",
+                    "alt": "background"
+                },
+                "general-form": {
+                    "fields": [
+                        {
+                            "name": "name",
+                            "label": "Name",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "name": "email",
+                            "label": "Email",
+                            "type": "email",
+                            "required": true
+                        },
+                        {
+                            "id": "phone-number",
+                            "label": "Phone Number",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "subject",
+                            "label": "Subject",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "message",
+                            "label": "Message",
+                            "type": "textarea",
+                            "required": true
+                        }
+                    ]
+                },
+                "business-form": {
+                    "fields": [
+                        {
+                            "id": "name",
+                            "label": "Name",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "email",
+                            "label": "Email",
+                            "type": "email",
+                            "required": true
+                        },
+                        {
+                            "id": "phone-number",
+                            "label": "Phone Number",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "category",
+                            "label": "Category",
+                            "type": "select",
+                            "options": [
+                                {
+                                    "value": "ticket-enquiries",
+                                    "label": "Ticket Enquiries"
+                                },
+                                {
+                                    "value": "sponsorship-enquiries",
+                                    "label": "Sponsorship Enquiries"
+                                }
+                            ],
+                            "required": true
+                        },
+                        {
+                            "id": "message",
+                            "label": "Message",
+                            "type": "textarea",
+                            "required": true
+                        }
+                    ]
+                },
+                "images": {
+                    "general-form": {
+                        "src": "/images/contact-us/general_inquiry.png",
+                        "alt": "logo"
+                    },
+                    "business-form": {
+                        "src": "/images/contact-us/business_inquiry.png",
+                        "alt": "logo"
+                    }
+                }
             }
         }
     }
