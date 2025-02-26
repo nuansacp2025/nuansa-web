@@ -10,31 +10,31 @@ export default function ContactForm() {
                     <div>
                         <label htmlFor="first-name" className="text-md sm:text-lg">First Name</label>
                         <div className="mt-2.5">
-                            <input type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
+                            <input id="first-name" type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
                         </div>
                     </div>
                     <div>
                         <label htmlFor="last-name" className="text-md sm:text-lg">Last Name</label>
                         <div className="mt-2.5">
-                            <input type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
+                            <input id="last-name" type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
                         </div>
                     </div>
                     <div>
                         <label htmlFor="email" className="text-md sm:text-lg">Email</label>
                         <div className="mt-2.5"> 
-                            <input type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
+                            <input id="email" type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
                         </div>
                     </div>
                     <div>
                         <label htmlFor="phone-number" className="text-md sm:text-lg">Phone Number</label>
                         <div className="mt-2.5">
-                            <input type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
+                            <input id="phone-number" type="text" className="block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"/>
                         </div>
                     </div>
                     <div className="col-span-2">
                         <label htmlFor="message" className="text-md sm:text-lg">Message</label>
                         <div>
-                            <textarea name="message" id="message" className="resize-none block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"></textarea>
+                            <textarea id="message" name="message" className="resize-none block w-full rounded-md border-0 px-2 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none"></textarea>
                         </div>
                     </div>
                 </div>
