@@ -8,7 +8,6 @@ import ModalOverlay from "../components/modal-overlay";
 import { ScrollableBackground } from "../components/background";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ScrollableBackground } from "../components/background";
 
 function SuccessMessage() {
     const searchParams = useSearchParams();
