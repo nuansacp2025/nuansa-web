@@ -5,6 +5,25 @@ import Image from "next/image";
 import { FadeInDiv } from "@/app/components/animations";
 
 export default function Page() {
+  const team = [
+    {
+      team: "Tech",
+      src: "/images/our-team/Tech.JPG"
+    },
+    {
+      team: "Pubs",
+      src: "/images/our-team/Pubs.jpg"
+    },
+    {
+      team: "Ticketing",
+      src: "/images/our-team/Ticketing.JPG"
+    },
+    {
+      team: "CR",
+      src: "/images/our-team/CR.jpg"
+    }
+  ]
+
   return (
     <main className="min-h-screen">
       <section className="relative w-full py-12 px-16 overflow-hidden md:py-20 md:px-0">
@@ -32,15 +51,23 @@ export default function Page() {
             Divisions and Tasks
           </h2>
         </FadeInDiv>
-        <FadeInDiv>
-          <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
-            Members
-          </h3>
-        </FadeInDiv>
-        <FadeInDiv className="w-full flex items-center justify-center">
-          <GroupCard imageSrc="/images/our-team/what-we-do.png" name="Artistic Team"/>
-        </FadeInDiv>
-      </section>
+        {
+          team.map(division => {
+            return (
+              <>
+              <FadeInDiv>
+              <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
+                  {division.team}
+                </h3>
+              </FadeInDiv>
+              <FadeInDiv className="w-full flex items-center justify-center mb-5">
+                <GroupCard imageSrc={division.src} name="External Affairs Team"/>
+              </FadeInDiv>
+              </>
+            );
+          })
+        }         
+        </section>
     </main>
   )
 }

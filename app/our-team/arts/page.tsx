@@ -4,7 +4,32 @@ import GroupCard from "@/app/components/our-team/group-card";
 import Image from "next/image";
 import { FadeInDiv } from "@/app/components/animations";
 
+
 export default function Page() {
+  const team = [
+    {
+      team: "Vocal",
+      src: "/images/our-team/Vocal.jpg"
+    },
+    {
+      team: "Music",
+      src: "/images/our-team/Music.JPG"
+    },
+    {
+      team: "Dance 1",
+      src: "/images/our-team/Dance1.JPG"
+    },
+    {
+      team: "Dance 2",
+      src: "/images/our-team/Dance2.JPG"
+    },
+    {
+      team: "Scriptwriter",
+      src: "/images/our-team/Scriptwriter.jpg"
+    }
+  ]
+  //snl (sound and lighting), snp (set and properties), lnw (logistic and wardrobe), sm, wnm production
+
   return (
     <main className="min-h-screen">
       <section className="relative w-full py-12 px-16 overflow-hidden md:py-20 md:px-0">
@@ -25,21 +50,28 @@ export default function Page() {
           </div>
         </FadeInDiv>
       </section>
-      
       <section className="w-full flex flex-col items-center py-12 px-16 md:py-20 md:px-32">
         <FadeInDiv>
           <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-green-a">
             Divisions and Tasks
           </h2>
         </FadeInDiv>
-        <FadeInDiv>
-          <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
-            Members
-          </h3>
-        </FadeInDiv>
-        <FadeInDiv className="w-full flex items-center justify-center">
-          <GroupCard imageSrc="/images/our-team/what-we-do.png" name="Artistic Team"/>
-        </FadeInDiv>
+        {
+          team.map(division => {
+            return (
+              <>
+              <FadeInDiv>
+              <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
+                  {division.team}
+                </h3>
+              </FadeInDiv>
+              <FadeInDiv className="w-full flex items-center justify-center mb-5">
+                <GroupCard imageSrc={division.src} name="Artistic Team"/>
+              </FadeInDiv>
+              </>
+            );
+          })
+        }
       </section>
     </main>
   )

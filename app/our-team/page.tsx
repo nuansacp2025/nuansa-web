@@ -22,7 +22,7 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-green-a">
           Management Profile
           </h2>
-          <Image src={"/images/our-team/structure.png"} alt="Management Profile" width={800} height={0}/>
+          <Image src={"/images/our-team/Management.jpg"} alt="Management Profile" width={800} height={0}/>
         </FadeInDiv>
       </section>
       <section className="py-12 px-16 md:py-20 md:px-32">
