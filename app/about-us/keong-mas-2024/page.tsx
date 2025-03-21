@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { FadeInDiv } from "@/app/components/animations";
+import { ScrollableBackground } from "@/app/components/background";
 import Gallery from "@/app/components/about-us/keong-mas-2024/gallery";
 import MainCast from "@/app/components/about-us/keong-mas-2024/main-casts";
 import Team from "@/app/components/about-us/keong-mas-2024/team";
