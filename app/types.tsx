@@ -7,6 +7,13 @@ interface ImageConfig {
 interface CastMember {
     name: string;
     character: string;
-    image: string;
+    image: ImageConfig;
     description?: string;
+}
+
+interface Sponsor {
+    name: string;
+    image: ImageConfig;
+    description?: string;
+    website?: string;
 }

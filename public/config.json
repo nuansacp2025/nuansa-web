@@ -2,6 +2,147 @@
     "app": {
         "name": "Nuansa Website",
         "pages": {
+            "home": {
+                "background": {
+                    "src": "/images/home/background.png",
+                    "alt": "background"
+                },
+                "images": {
+                    "crying-stone-logo": {
+                        "src": "/images/home/the-crying-stone.png",
+                        "alt": "The Crying Stone"
+                    }
+                },
+                "launch-date": "2025-09-07",
+                "synopsis": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly. As punishment for her mistreatment of her mother, a prayer by the widow causes the daughter to be struck by lightning and turned into a crying stone statue. The story teaches the importance of honoring one&apos;s parents.",
+                "characters": [
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    },
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    },
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    }
+                ],
+                "sponsors": [
+                    [
+                        {
+                            "name": "Business Indonesia Singapore Association",
+                            "image": {
+                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                "alt": "BISA Logo"
+                            }
+                        }, {
+                            "name": "Wardaya College",
+                            "image": {
+                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                "alt": "Wardaya College Logo"
+                            }
+                        }, {
+                            "name": "Mandiri",
+                            "image": {
+                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+                                "alt": "Mandiri Logo"
+                            }
+                        }, {
+                            "name": "BRI",
+                            "image": {
+                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+                                "alt": "BRI Logo"
+                            }
+                        }, {
+                            "name": "PSA",
+                            "image": {
+                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
+                                "alt": "PSA Logo"
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Business Indonesia Singapore Association",
+                            "image": {
+                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                "alt": "BISA Logo"
+                            }
+                        }, {
+                            "name": "Wardaya College",
+                            "image": {
+                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                "alt": "Wardaya College Logo"
+                            }
+                        }, {
+                            "name": "Mandiri",
+                            "image": {
+                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+                                "alt": "Mandiri Logo"
+                            }
+                        }, {
+                            "name": "BRI",
+                            "image": {
+                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+                                "alt": "BRI Logo"
+                            }
+                        }, {
+                            "name": "PSA",
+                            "image": {
+                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
+                                "alt": "PSA Logo"
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Business Indonesia Singapore Association",
+                            "image": {
+                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                "alt": "BISA Logo"
+                            }
+                        }, {
+                            "name": "Wardaya College",
+                            "image": {
+                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                "alt": "Wardaya College Logo"
+                            }
+                        }, {
+                            "name": "Mandiri",
+                            "image": {
+                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
+                                "alt": "Mandiri Logo"
+                            }
+                        }, {
+                            "name": "BRI",
+                            "image": {
+                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
+                                "alt": "BRI Logo"
+                            }
+                        }, {
+                            "name": "PSA",
+                            "image": {
+                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
+                                "alt": "PSA Logo"
+                            }
+                        }
+                    ]
+                ]
+            },
             "about-us": {
                 "history": [
                     {
@@ -46,19 +187,28 @@
                         {
                             "name": "Robert Downey Jr.",
                             "character": "Tony Stark / Iron Man",
-                            "image": "/images/characters/ironman.png",
+                            "image": {
+                                "src": "/images/characters/ironman.png",
+                                "alt": "Iron Man"
+                            },
                             "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man."
                         },
                         {
                             "name": "Chris Evans",
                             "character": "Steve Rogers / Captain America",
-                            "image": "/images/characters/captain_america.png",
+                            "image": {
+                                "src": "/images/characters/captain_america.png",
+                                "alt": "Captain America"
+                            },
                             "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people."
                         },
                         {
                             "name": "Scarlett Johansson",
                             "character": "Natasha Romanoff / Black Widow",
-                            "image": "/images/characters/black_widow.png",
+                            "image": {
+                                "src": "/images/characters/black_widow.png",
+                                "alt": "Black Widow"
+                            },
                             "description": "The one who always stand for what's right, the one who always fight for the people."
                         }
                     ],

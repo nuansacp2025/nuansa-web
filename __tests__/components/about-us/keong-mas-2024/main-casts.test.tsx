@@ -6,19 +6,28 @@ const mockCast = [
   {
     name: "Cast 1",
     character: "Character 1",
-    image: "/cast-1.png",
+    image: {
+      "src": "/cast-1.png",
+      "alt": "Cast 1",
+    },
     description: "Genius billionaire playboy philanthropist.",
   },
   {
     name: "Cast 2",
     character: "Character 2",
-    image: "/cast-2.png",
+    image: {
+      "src": "/cast-2.png",
+      "alt": "Cast 2",
+    },
     description: "The strongest Avenger.",
   },
   {
     name: "Cast 3",
     character: "Character 3",
-    image: "/cast-3.png",
+    image: {
+      "src": "/cast-3.png",
+      "alt": "Cast 3"
+    },
     description: "The God of Thunder.",
   },
 ];
@@ -44,7 +53,7 @@ describe("MainCast Component", () => {
     render(<MainCast cast={mockCast} />);
 
     mockCast.forEach((member) => {
-      const image = screen.getByAltText(member.name);
+      const image = screen.getByAltText(member.image.alt);
       expect(image).toBeInTheDocument();
     });
   });

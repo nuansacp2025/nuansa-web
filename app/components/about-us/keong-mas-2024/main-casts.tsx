@@ -17,8 +17,8 @@ const MainCast: React.FC<CastProps> = ({ cast }) => {
         >
           <div className="relative w-full h-64">
             <Image
-              src={member.image}
-              alt={member.name}
+              src={member.image.src}
+              alt={member.image.alt}
               fill
               style={{ objectFit: "cover" }}
               className="rounded-t-lg"

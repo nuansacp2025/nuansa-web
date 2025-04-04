@@ -64,9 +64,15 @@ const Timer = ({ launchDate }: { launchDate: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeCount>(getTimeLeft(launchDate));
 
   useEffect(() => {
+    if (!launchDate || isNaN(new Date(launchDate).getTime())) {
+      setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
+      return;
+    }
     const interval = setInterval(() => {
       setTimeLeft(getTimeLeft(launchDate));
     }, 1000);
+
+    return () => clearInterval(interval);
   }, [launchDate]);
 
   return (
