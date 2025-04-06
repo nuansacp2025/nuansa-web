@@ -9,6 +9,12 @@ interface CastMember {
     character: string;
     image: ImageConfig;
     description?: string;
+    size?: {
+        width?: string,
+        height?: string;
+        colSpan?: number;
+        rowSpan?: number;
+    };
 }
 
 interface Sponsor {
@@ -16,4 +22,11 @@ interface Sponsor {
     image: ImageConfig;
     description?: string;
     website?: string;
+}
+
+interface SponsorTier {
+    tier: string;
+    color: string;
+    showdesc: boolean;
+    companies: Sponsor[][];
 }

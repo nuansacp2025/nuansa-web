@@ -16,7 +16,7 @@ export default function Home() {
   const [launchDate, setLaunchDate] = useState<string>('');
   const [synopsis, setSynopsis] = useState<string>('');
   const [characters, setCharacters] = useState<CastMember[]>([]);
-  const [sponsors, setSponsors] = useState<Sponsor[][]>([]);
+  const [sponsors, setSponsors] = useState<SponsorTier[]>([]);
 
   useEffect(() => {
     fetch('/config.json')

@@ -3,51 +3,67 @@ import SponsorGrid from "@/app/components/sponsor-grid";
 import "@testing-library/jest-dom";
 
 describe("SponsorGrid Component", () => {
-    it("should render the sponsor grid with the correct number of images", () => {
-        const mockSponsors = [
-            [
-                {
-                    name: "Sponsor 1",
-                    image: {
-                        src: "/images/sponsor1.png",
-                        alt: "Sponsor 1"
-                    }
-                },
-                {
-                    name: "Sponsor 2",
-                    image: {
-                        src: "/images/sponsor2.png",
-                        alt: "Sponsor 2"
-                    }
-                }
-            ],
-            [
-                {
-                    name: "Sponsor 3",
-                    image: {
-                        src: "/images/sponsor3.png",
-                        alt: "Sponsor 3"
-                    }
-                },
-                {
-                    name: "Sponsor 4",
-                    image: {
-                        src: "/images/sponsor4.png",
-                        alt: "Sponsor 4"
-                    }
-                }
-            ]
-        ];
-        render(<SponsorGrid sponsors={mockSponsors} />);
+  const mockSponsors = [
+    {
+      tier: "Tier 1",
+      color: "Color 1",
+      showdesc: true,
+      companies: [
+        [
+          {
+            name: "Sponsor 1",
+            image: {
+              src: "/images/sponsor1.png",
+              alt: "Sponsor 1",
+            },
+          },
+          {
+            name: "Sponsor 2",
+            image: {
+              src: "/images/sponsor2.png",
+              alt: "Sponsor 2",
+            },
+          },
+        ],
+      ],
+    },
+    {
+      tier: "Tier 2",
+      color: "Color 2",
+      showdesc: false,
+      companies: [
+        [
+          {
+            name: "Sponsor 3",
+            image: {
+              src: "/images/sponsor3.png",
+              alt: "Sponsor 3",
+            },
+          },
+          {
+            name: "Sponsor 4",
+            image: {
+              src: "/images/sponsor4.png",
+              alt: "Sponsor 4",
+            },
+          },
+        ],
+      ],
+    },
+  ];
 
-        // Check that the correct number of sponsor images are rendered
-        let sponsorCounter = 0;
-        mockSponsors.forEach((row) => {
-            sponsorCounter += row.length;
-        });
-        const sponsorImages = screen.getAllByRole("img");
-        expect(sponsorImages).toHaveLength(sponsorCounter);
-    });
+  it("should render the sponsor grid with the correct number of images", () => {
+    render(<SponsorGrid sponsors={mockSponsors} />);
+
+    // Calculate the total number of sponsor images
+    const sponsorCounter = mockSponsors.reduce(
+      (count, tier) => count + tier.companies.flat().length,
+      0
+    );
+
+    const sponsorImages = screen.getAllByRole("img");
+    expect(sponsorImages).toHaveLength(sponsorCounter);
+  });
 
   it("should render the heading 'Our Sponsors'", () => {
     render(<SponsorGrid sponsors={[]} />);
@@ -61,5 +77,16 @@ describe("SponsorGrid Component", () => {
 
     const sponsorImages = screen.queryAllByRole("img");
     expect(sponsorImages).toHaveLength(0);
+  });
+
+  it("should render sponsor tiers with the correct styles and content", () => {
+    render(<SponsorGrid sponsors={mockSponsors} />);
+
+    mockSponsors.forEach((tier) => {
+      // Check that the tier heading is rendered with the correct text and style
+      const tierHeading = screen.getByText(`${tier.tier} Sponsors`);
+      expect(tierHeading).toBeInTheDocument();
+      expect(tierHeading).toHaveStyle(`color: ${tier.color}`);
+    });
   });
 });

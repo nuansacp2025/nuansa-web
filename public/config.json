@@ -42,105 +42,75 @@
                     }
                 ],
                 "sponsors": [
-                    [
-                        {
-                            "name": "Business Indonesia Singapore Association",
-                            "image": {
-                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                "alt": "BISA Logo"
-                            }
-                        }, {
-                            "name": "Wardaya College",
-                            "image": {
-                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
-                                "alt": "Wardaya College Logo"
-                            }
-                        }, {
-                            "name": "Mandiri",
-                            "image": {
-                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
-                                "alt": "Mandiri Logo"
-                            }
-                        }, {
-                            "name": "BRI",
-                            "image": {
-                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
-                                "alt": "BRI Logo"
-                            }
-                        }, {
-                            "name": "PSA",
-                            "image": {
-                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
-                                "alt": "PSA Logo"
-                            }
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Business Indonesia Singapore Association",
-                            "image": {
-                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                "alt": "BISA Logo"
-                            }
-                        }, {
-                            "name": "Wardaya College",
-                            "image": {
-                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
-                                "alt": "Wardaya College Logo"
-                            }
-                        }, {
-                            "name": "Mandiri",
-                            "image": {
-                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
-                                "alt": "Mandiri Logo"
-                            }
-                        }, {
-                            "name": "BRI",
-                            "image": {
-                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
-                                "alt": "BRI Logo"
-                            }
-                        }, {
-                            "name": "PSA",
-                            "image": {
-                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
-                                "alt": "PSA Logo"
-                            }
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Business Indonesia Singapore Association",
-                            "image": {
-                                "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                "alt": "BISA Logo"
-                            }
-                        }, {
-                            "name": "Wardaya College",
-                            "image": {
-                                "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
-                                "alt": "Wardaya College Logo"
-                            }
-                        }, {
-                            "name": "Mandiri",
-                            "image": {
-                                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCg_JnHe9fpgSVJWYf10gHf0lQmaL_V9wgQ&s",
-                                "alt": "Mandiri Logo"
-                            }
-                        }, {
-                            "name": "BRI",
-                            "image": {
-                                "src": "https://imageio.forbes.com/specials-images/dam/imageserve/66eb19d7812fe443fd87e06e/0x0.png?format=png&crop=560,560,x70,y70,safe&height=416&width=416",
-                                "alt": "BRI Logo"
-                            }
-                        }, {
-                            "name": "PSA",
-                            "image": {
-                                "src": "https://www.moe.gov.sg/-/media/sgis/industries/2022-psa-logo-black-no-tagline.png?h=120&hash=647EE62F9070590C140FDE75F02243AA",
-                                "alt": "PSA Logo"
-                            }
-                        }
-                    ]
+                    {
+                        "tier": "Gold",
+                        "color": "gold",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "tier": "Silver",
+                        "color": "silver",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "tier": "Bronze",
+                        "color": "#CD7F32",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    }
                 ]
             },
             "about-us": {
@@ -191,7 +161,13 @@
                                 "src": "/images/characters/ironman.png",
                                 "alt": "Iron Man"
                             },
-                            "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man."
+                            "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man.",
+                            "size": {
+                                "width": "16rem",
+                                "height": "20rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         },
                         {
                             "name": "Chris Evans",
@@ -200,7 +176,13 @@
                                 "src": "/images/characters/captain_america.png",
                                 "alt": "Captain America"
                             },
-                            "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people."
+                            "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people.",
+                            "size": {
+                                "width": "20rem",
+                                "height": "24rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         },
                         {
                             "name": "Scarlett Johansson",
@@ -209,7 +191,13 @@
                                 "src": "/images/characters/black_widow.png",
                                 "alt": "Black Widow"
                             },
-                            "description": "The one who always stand for what's right, the one who always fight for the people."
+                            "description": "The one who always stand for what's right, the one who always fight for the people.",
+                            "size": {
+                                "width": "16rem",
+                                "height": "20rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         }
                     ],
                     "gallery": [

@@ -34,8 +34,6 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, he
                 setMarginBot('0px');
             }
             const temp = -1 * latestValue / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
-            console.log(backgroundHeight);
-            console.log(temp);
             setMarginTop(`${temp}px`);
             setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
             setWidth(window.innerWidth);
