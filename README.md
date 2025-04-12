@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NUANSA Web Portal
 
-## Getting Started
+Welcome to the official repository for the **NUANSA Web Portal**. This project is built on [Next.js](https://nextjs.org/) and serves as the primary website for the upcoming NUANSA event.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Overview](#overview)
+- [Event Details](#event-details)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Overview
 
-## Learn More
+**NUANSA** is a cultural production by undergraduates in NUS mainly showcasing Indonesia's rich heritage and culture throughout annual theatrical performances that blend traditional music, dance and drama with contemporary storytelling. 
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Event Details
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Event Title:** NUANSA 2025
+- **Date:** September 7, 2025
+- **Description:** Watch the latest performances and cultural showcases from Indonesia, featuring traditional music, dance, and drama.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technology Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Front-End:** 
+  - [Next.js](https://nextjs.org/)
+  - React
+  - CSS Modules / Tailwind CSS for styling
+- **Hosting:** 
+  - Deployed on [Vercel](https://vercel.com/)
+- **Other Tools:** 
+  - Git for version control
+  - Continuous Deployment (CD) via Vercel and GitHub Actions
+
+---
+
+## Installation
+
+### Prerequisites
+
+- **Node.js:** Version 14 or higher
+- **npm or yarn:** As the package manager
+
+### Steps
+
+1. **Clone the Repository:**
+    Execute the following command in your terminal:
+    ```bash
+        git clone https://github.com/nuansacp2025/nuansa-web.git
+    ```
+
+2. **Navigate to the Project Directory:**
+    ```bash
+        cd nuansa-web
+    ```
+
+3. **Install Dependencies:**
+    ```bash
+        npm install
+    ```
+
+4. **Run the Development Server:**
+    ```bash
+        npm run dev
+    ```
+
+5. **Open Your Browser:**
+    Navigate to `http://localhost:3000` to view the application.
+
+---
+
+## Usage
+
+1. **Home Page:** Displays the overview of the event, including the date and a brief description.
+
+2. **About Us Page:** Provides detailed information about NUANSA, its history, and its significance.
+
+3. **About Us History Page:** A dedicated page that dives deeper into the history of NUANSA, showcasing past events and milestones.
+
+4. **About Us Keong Mas Page:** A special page dedicated to the NUANSA 2025 event, featuring the theme "Keong Mas" and its significance.
+
+5. **Contact Us Page:** A form for users to reach out for inquiries or feedback.
+
+6. **Our Team Page:** Showcases the team behind NUANSA, including their roles and contributions.
+
+7. **Arts Team Page:** A dedicated page for the arts team, highlighting their efforts and contributions to the event.
+
+8. **Production Team Page:** A dedicated page for the production team, showcasing their roles and contributions to the event.
+
+9. **External Affairs Team Page:** A dedicated page for the external affairs team, highlighting their efforts and contributions to the event.
+
+## Deployment
+
+This project is deployed on Vercel. When changes are pushed to the `main` branch, a continuous deployment pipeline automatically builds and deploys the updated version. When changes are pushed to the `staging` branch, a deployment will be pushed to the preproduction environment. When a Pull Request is created, a preview deployment will be created for the branch.
