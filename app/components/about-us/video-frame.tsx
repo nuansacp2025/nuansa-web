@@ -11,6 +11,8 @@ export default function VideoFrame({ videoTitle, videoSrc }: VideoFrameProps) {
             <iframe
                 src={videoSrc}
                 title={videoTitle}
+                width="448"
+                height="252"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
