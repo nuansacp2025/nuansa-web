@@ -101,28 +101,28 @@ export default function AboutUs() {
                 name: "Evan Wijaya",
                 title: "President",
                 company: "Nuansa",
-                imgSrc: "/images/characters/black_widow.png", // Save the uploaded image to /public/images
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg", // Save the uploaded image to /public/images
                 quote: "Joining Nuansa connected me with amazing people and creativity!"
               },
               {
                 name: "Evan Wijaya",
                 title: "President",
                 company: "Nuansa",
-                imgSrc: "/images/characters/black_widow.png",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
                 quote: "I found a community that values culture and collaboration."
               },
               {
                 name: "Evan Wijaya",
                 title: "President",
                 company: "Nuansa",
-                imgSrc: "/images/characters/black_widow.png",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
                 quote: "Creativity meets purpose here. It’s magical!"
               },
               {
                 name: "Evan Wijaya",
                 title: "President",
                 company: "Nuansa",
-                imgSrc: "/images/characters/black_widow.png",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
                 quote: "An inspiring platform for growth and friendship."
               }
             ].map((member, idx) => (
