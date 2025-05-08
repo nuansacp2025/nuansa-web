@@ -17,6 +17,51 @@ global.IntersectionObserver = class {
 import MainCast from "@/app/components/about-us/keong-mas-2024/main-casts";
 import Gallery from "@/app/components/about-us/keong-mas-2024/gallery";
 
+const mockKeongMas2024Config = {
+    "main-casts": [
+        {
+            name: "Main Cast 1",
+            character: "Character 1",
+            image: "/main-cast-1.png",
+            description: "Description 1",
+        },
+        {
+            name: "Main Cast 2",
+            character: "Character 2",
+            image: "/main-cast-2.png",
+            description: "Description 2",
+        },
+        {
+            name: "Main Cast 3",
+            character: "Character 3",
+            image: "/main-cast-3.png",
+            description: "Description 3",
+        }
+    ],
+    gallery: [
+        [
+            {
+                src: "/gallery-1.png",
+                alt: "Gallery 1",
+            },
+            {
+                src: "/gallery-2.png",
+                alt: "Gallery 2",
+            },
+        ],
+        [
+            {
+                src: "/gallery-3.png",
+                alt: "Gallery 3",
+            },
+            {
+                src: "/gallery-4.png",
+                alt: "Gallery 4",
+            },
+        ]
+    ],
+};
+
 global.fetch = jest.fn(() =>
     Promise.resolve({
         ok: true,
@@ -25,50 +70,7 @@ global.fetch = jest.fn(() =>
             app: {
                 pages: {
                     "about-us": {
-                        "keong-mas-2024": {
-                            "main-casts": [
-                                {
-                                    name: "Main Cast 1",
-                                    character: "Character 1",
-                                    image: "/main-cast-1.png",
-                                    description: "Description 1",
-                                },
-                                {
-                                    name: "Main Cast 2",
-                                    character: "Character 2",
-                                    image: "/main-cast-2.png",
-                                    description: "Description 2",
-                                },
-                                {
-                                    name: "Main Cast 3",
-                                    character: "Character 3",
-                                    image: "/main-cast-3.png",
-                                    description: "Description 3",
-                                }
-                            ],
-                            gallery: [
-                                [
-                                    {
-                                        src: "/gallery-1.png",
-                                        alt: "Gallery 1",
-                                    },
-                                    {
-                                        src: "/gallery-2.png",
-                                        alt: "Gallery 2",
-                                    },
-                                ],
-                                [
-                                    {
-                                        src: "/gallery-3.png",
-                                        alt: "Gallery 3",
-                                    },
-                                    {
-                                        src: "/gallery-4.png",
-                                        alt: "Gallery 4",
-                                    },
-                                ]
-                            ],
-                        },
+                        "keong-mas-2024": mockKeongMas2024Config
                     },
                 },
             },
@@ -89,55 +91,11 @@ describe("AboutUsKeongMasPage", () => {
 
         await waitFor(() => {
             expect(MainCast).toHaveBeenLastCalledWith(
-                expect.objectContaining({
-                    cast: [
-                        {
-                            name: "Main Cast 1",
-                            character: "Character 1",
-                            image: "/main-cast-1.png",
-                            description: "Description 1",
-                        },
-                        {
-                            name: "Main Cast 2",
-                            character: "Character 2",
-                            image: "/main-cast-2.png",
-                            description: "Description 2",
-                        },
-                        {
-                            name: "Main Cast 3",
-                            character: "Character 3",
-                            image: "/main-cast-3.png",
-                            description: "Description 3",
-                        }
-                    ]
-                }),
+                expect.objectContaining({cast: mockKeongMas2024Config["main-casts"]}),
                 expect.anything()
             );
             expect(Gallery).toHaveBeenLastCalledWith(
-                expect.objectContaining({
-                    images: [
-                        [
-                            {
-                                src: "/gallery-1.png",
-                                alt: "Gallery 1",
-                            },
-                            {
-                                src: "/gallery-2.png",
-                                alt: "Gallery 2",
-                            },
-                        ],
-                        [
-                            {
-                                src: "/gallery-3.png",
-                                alt: "Gallery 3",
-                            },
-                            {
-                                src: "/gallery-4.png",
-                                alt: "Gallery 4",
-                            },
-                        ]
-                    ]
-                }),
+                expect.objectContaining({images: mockKeongMas2024Config["gallery"]}),
                 expect.anything()
             );
         });

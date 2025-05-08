@@ -2,6 +2,117 @@
     "app": {
         "name": "Nuansa Website",
         "pages": {
+            "home": {
+                "background": {
+                    "src": "/images/home/background.png",
+                    "alt": "background"
+                },
+                "images": {
+                    "crying-stone-logo": {
+                        "src": "/images/home/the-crying-stone.png",
+                        "alt": "The Crying Stone"
+                    }
+                },
+                "launch-date": "2025-09-07",
+                "synopsis": "A selfish and lazy daughter neglects her ailing mother, repaying her love with cold neglect and biting words. Heartbroken and alone, the mother kneels in the twilight, praying for mercy on her own child. In answer to the prayer, lightning strikes the daughter, transforming her into a weeping stone statue. The tale serves as a cautionary reminder of a timeless truth: filial duty is not a burden but a sacred bond, and to dishonor one’s parents is to risk losing one’s own humanity.",
+                "characters": [
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    },
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    },
+                    {
+                        "name": "character",
+                        "image": {
+                            "src": "/images/characters/character_template.png",
+                            "alt": "character"
+                        },
+                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                    }
+                ],
+                "sponsors": [
+                    {
+                        "tier": "Gold",
+                        "color": "gold",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "tier": "Silver",
+                        "color": "silver",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "tier": "Bronze",
+                        "color": "#CD7F32",
+                        "showdesc": false,
+                        "companies": [
+                            [
+                                {
+                                    "name": "Business Indonesia Singapore Association",
+                                    "image": {
+                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
+                                        "alt": "BISA Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Wardaya College",
+                                    "image": {
+                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "alt": "Wardaya College Logo"
+                                    }
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
             "about-us": {
                 "history": [
                     {
@@ -46,20 +157,47 @@
                         {
                             "name": "Robert Downey Jr.",
                             "character": "Tony Stark / Iron Man",
-                            "image": "/images/characters/ironman.png",
-                            "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man."
+                            "image": {
+                                "src": "/images/characters/ironman.png",
+                                "alt": "Iron Man"
+                            },
+                            "description": "Genius, billionaire, playbor, philanthropist. And ofcourse, the one who started it all, the one who sacrificed himself to save the universe, Iron Man.",
+                            "size": {
+                                "width": "16rem",
+                                "height": "20rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         },
                         {
                             "name": "Chris Evans",
                             "character": "Steve Rogers / Captain America",
-                            "image": "/images/characters/captain_america.png",
-                            "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people."
+                            "image": {
+                                "src": "/images/characters/captain_america.png",
+                                "alt": "Captain America"
+                            },
+                            "description": "The first avenger, the one who always stand for what's right, the one who always fight for the people.",
+                            "size": {
+                                "width": "20rem",
+                                "height": "24rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         },
                         {
                             "name": "Scarlett Johansson",
                             "character": "Natasha Romanoff / Black Widow",
-                            "image": "/images/characters/black_widow.png",
-                            "description": "The one who always stand for what's right, the one who always fight for the people."
+                            "image": {
+                                "src": "/images/characters/black_widow.png",
+                                "alt": "Black Widow"
+                            },
+                            "description": "The one who always stand for what's right, the one who always fight for the people.",
+                            "size": {
+                                "width": "16rem",
+                                "height": "20rem",
+                                "colSpan": 1,
+                                "rowSpan": 1
+                            }
                         }
                     ],
                     "gallery": [
@@ -118,6 +256,100 @@
                             }
                         ]
                     ]
+                }
+            },
+            "contact-us": {
+                "background": {
+                    "src": "/images/contact-us/background.png",
+                    "alt": "background"
+                },
+                "general-form": {
+                    "fields": [
+                        {
+                            "name": "name",
+                            "label": "Name",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "name": "email",
+                            "label": "Email",
+                            "type": "email",
+                            "required": true
+                        },
+                        {
+                            "id": "phone-number",
+                            "label": "Phone Number",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "subject",
+                            "label": "Subject",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "message",
+                            "label": "Message",
+                            "type": "textarea",
+                            "required": true
+                        }
+                    ]
+                },
+                "business-form": {
+                    "fields": [
+                        {
+                            "id": "name",
+                            "label": "Name",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "email",
+                            "label": "Email",
+                            "type": "email",
+                            "required": true
+                        },
+                        {
+                            "id": "phone-number",
+                            "label": "Phone Number",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "id": "category",
+                            "label": "Category",
+                            "type": "select",
+                            "options": [
+                                {
+                                    "value": "ticket-enquiries",
+                                    "label": "Ticket Enquiries"
+                                },
+                                {
+                                    "value": "sponsorship-enquiries",
+                                    "label": "Sponsorship Enquiries"
+                                }
+                            ],
+                            "required": true
+                        },
+                        {
+                            "id": "message",
+                            "label": "Message",
+                            "type": "textarea",
+                            "required": true
+                        }
+                    ]
+                },
+                "images": {
+                    "general-form": {
+                        "src": "/images/contact-us/general_inquiry.png",
+                        "alt": "logo"
+                    },
+                    "business-form": {
+                        "src": "/images/contact-us/business_inquiry.png",
+                        "alt": "logo"
+                    }
                 }
             }
         }
