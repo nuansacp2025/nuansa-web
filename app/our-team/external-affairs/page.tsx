@@ -2,6 +2,7 @@
 
 import GroupCard from "@/app/components/our-team/group-card";
 import Image from "next/image";
+import Link from "next/link";
 import { FadeInDiv } from "@/app/components/animations";
 
 export default function Page() {
@@ -46,24 +47,33 @@ export default function Page() {
       </section>
       
       <section className="w-full flex flex-col items-center py-12 px-16 md:py-20 md:px-32">
-        <FadeInDiv>
-          <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-green-a">
-            Divisions and Tasks
+        <FadeInDiv className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30 bg-transparent">
+          <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-green-a text-center">
+            Divisions
           </h2>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-12">
+            {
+              team.map(division => {
+                return (
+                  <Link href={`#${division.team}`}>
+                    <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
+                      {division.team}
+                    </button>
+                  </Link>
+                );
+              })
+            }
+          </div>
         </FadeInDiv>
         {
           team.map(division => {
             return (
-              <>
-              <FadeInDiv>
-              <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
+              <FadeInDiv id={division.team} className="w-full flex flex-col items-center justify-center mb-5">
+                <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
                   {division.team}
                 </h3>
-              </FadeInDiv>
-              <FadeInDiv className="w-full flex items-center justify-center mb-5">
                 <GroupCard imageSrc={division.src} name="External Affairs Team"/>
               </FadeInDiv>
-              </>
             );
           })
         }         
