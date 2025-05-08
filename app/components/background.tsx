@@ -20,10 +20,11 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, he
         if (backgroundHeight < window.innerHeight) {
             setMarginTop('0px');
             setMarginBot('0px');
+        } else {
+            const temp = -1 * window.scrollY / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
+            setMarginTop(`${temp}px`);
+            setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
         }
-        const temp = -1 * window.scrollY / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
-        setMarginTop(`${temp}px`);
-        setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
         setWidth(window.innerWidth);
     }, [height, width]);
     useEffect(() => {
@@ -32,10 +33,11 @@ export const ScrollableBackground: React.FC<BackgroundProps> = ({ src, width, he
             if (backgroundHeight < window.innerHeight) {
                 setMarginTop('0px');
                 setMarginBot('0px');
+            } else {
+                const temp = -1 * latestValue / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
+                setMarginTop(`${temp}px`);
+                setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
             }
-            const temp = -1 * latestValue / (document.body.scrollHeight - window.innerHeight) * (backgroundHeight - window.innerHeight);
-            setMarginTop(`${temp}px`);
-            setMarginBot(`${window.innerHeight - backgroundHeight - temp}px`);
             setWidth(window.innerWidth);
         });
     }, [height, scrollY, width]);
