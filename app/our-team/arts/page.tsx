@@ -60,7 +60,7 @@ export default function Page() {
             {
               team.map(division => {
                 return (
-                  <Link href={`#${division.team}`}>
+                  <Link key={division.team} href={`#${division.team}`}>
                     <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
                       {division.team}
                     </button>
@@ -73,7 +73,7 @@ export default function Page() {
         {
           team.map(division => {
             return (
-              <FadeInDiv id={division.team} className="w-full flex flex-col items-center justify-center mb-5">
+              <FadeInDiv key={division.team} id={division.team} className="w-full flex flex-col items-center justify-center mb-5">
                 <h3 className="text-2xl md:text-3xl pb-6 md:pb-8 font-semibold text-green-a">
                   {division.team}
                 </h3>
