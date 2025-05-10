@@ -25,21 +25,23 @@ export default function Carousel({ children }: CarouselProps) {
   }, []);
 
   return (
-    <Swiper
-      modules={[Navigation, A11y]}
-      spaceBetween={0}
-      slidesPerView="auto"
-      navigation
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      {children.map((child, index) => (
-        <SwiperSlide key={index}>
-          <div className="flex flex-row justify-center items-center gap-x-20 px-100 mb-10">
+    <div className="w-[90vw] mx-auto relative">
+      <Swiper
+        modules={[Navigation, A11y]}
+        spaceBetween={0}
+        slidesPerView="auto"
+        navigation
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      >
+        {children.map((child, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-row justify-center items-center gap-x-10 md:gap-x-20 px-4 md:px-20 mb-10">
             {child}
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
