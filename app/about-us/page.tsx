@@ -42,11 +42,12 @@ export default function AboutUs() {
         */
       }
       {/* What is Nuansa section */}
-      <section className="text-center py-24 px-4 md:px-10 bg-orange-a">
+      <section className="text-center py-24 px-4 md:px-10">
         <FadeInDiv>
           <h1 className="text-4xl font-bold mb-4">What is &quot;Nuansa&quot;</h1>
           <p className="text-lg">
             An annual arts and cultural event by a group of Indonesian students in NUS.
+            <br/>
             It aims to promote the rich and diverse cultures of Indonesia.
           </p>
         </FadeInDiv>
@@ -74,59 +75,72 @@ export default function AboutUs() {
           <h2 className="text-3xl font-bold mb-5">Memorable Clips</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-y-8 md:gap-x-20">
             <Carousel>
-              <img 
-                src="images/about-us/NuansaHistory_2019.jpg" 
-                alt="Some Memorable Clips"
-                className="max-h-[200px] object-contain"
+              <VideoFrame
+                videoTitle="NUANSA 2024"
+                videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
               />
-              <img 
-                src="images/about-us/NuansaHistory_2018.jpg" 
-                alt="Some Memorable Clips" 
-                className="max-h-[200px] object-contain"
+              <VideoFrame
+                videoTitle="NUANSA 2024"
+                videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
               />
-              <img 
-                src="images/about-us/NuansaHistory_2017.jpg" 
-                alt="Some Memorable Clips" 
-                className="max-h-[200px] object-contain"
+              <VideoFrame
+                videoTitle="NUANSA 2024"
+                videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
               />
             </Carousel>
           </div>
         </FadeInDiv>
       </section>
-      <section className="text-center py-12">
-        {/* Flex container for Why Join Us section */}
+      <section className="text-center py-12 px-4 md:px-10">
         <FadeInDiv>
-          <div className="flex flex-col-reverse md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
-            {/* Grid of Features (Networking, Collaboration, Creativity) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-red-900 text-white p-10 rounded-md w-48 h-44 flex justify-center items-center mx-2 my-2">
-                Networking
+          <h2 className="text-4xl mb-10 text-green-a">Why Join Us</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+            {/* Member Card */}
+            {[
+              {
+                name: "Evan Wijaya",
+                title: "President",
+                company: "Nuansa",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg", // Save the uploaded image to /public/images
+                quote: "Joining Nuansa connected me with amazing people and creativity!"
+              },
+              {
+                name: "Evan Wijaya",
+                title: "President",
+                company: "Nuansa",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
+                quote: "I found a community that values culture and collaboration."
+              },
+              {
+                name: "Evan Wijaya",
+                title: "President",
+                company: "Nuansa",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
+                quote: "Creativity meets purpose here. It’s magical!"
+              },
+              {
+                name: "Evan Wijaya",
+                title: "President",
+                company: "Nuansa",
+                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
+                quote: "An inspiring platform for growth and friendship."
+              }
+            ].map((member, idx) => (
+              <div key={idx} className="relative group overflow-hidden rounded-lg shadow-lg">
+                <Image
+                  src={member.imgSrc}
+                  alt={member.name}
+                  width={300}
+                  height={300}
+                  className="w-full h-72 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white px-4 text-center">
+                  <h3 className="text-lg font-bold">{member.name}</h3>
+                  <p className="text-sm italic">{member.title}, {member.company}</p>
+                  <p className="mt-2 text-sm">{member.quote}</p>
+                </div>
               </div>
-              <div className="bg-yellow-500 text-white p-10 rounded-md w-48 h-44 flex justify-center items-center mx-2 my-2">
-                Networking
-              </div>
-              <div className="bg-purple-900 text-white p-10 rounded-md w-48 h-44 flex justify-center items-center mx-2 my-2">
-                Networking
-              </div>
-            </div>
-          
-
-            {/* Why Join Us heading */}
-            <div className="mb-8 md:mb-0">
-              <h1 className="text-4xl mb-4 text-center text-green-a">Why Join Us</h1>
-            </div>
-          </div>
-        </FadeInDiv>
-
-        {/* Video section */}
-        <FadeInDiv>
-          <div className="flex flex-col md:flex-row items-center justify-center pb-10 gap-8 md:gap-20">
-            <h1 className="text-4xl mb-4 text-green-a">View Our Latest Show <span className="hidden md:inline">{">>"}</span>
-            </h1>
-            <VideoFrame
-              videoTitle="NUANSA 2024"
-              videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
-            />
+            ))}
           </div>
         </FadeInDiv>
       </section>
