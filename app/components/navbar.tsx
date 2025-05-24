@@ -91,6 +91,7 @@ const Navbar = () => {
   })
   useEffect(() => {
     setNavbarHidden(pathname === "/" ? "hidden" : "visible");
+    setMobileMenuHidden(true);
   }, [pathname]);
 
   return (
@@ -106,22 +107,25 @@ const Navbar = () => {
         </span>
       </div>
       <div className={`
-        ${mobileMenuHidden ? "hidden" : "flex"}
-        absolute h-max inset-0 top-full z-10 md:relative md:flex md:top-0 
-        flex-col p-2 md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
-        bg-green-b md:bg-inherit
+        ${mobileMenuHidden ? "hidden" : "block"}
+        absolute top-full left-0 right-0 h-screen bg-black bg-opacity-25 z-10
+        md:block md:top-0 md:w-full md:h-full md:bg-inherit md:bg-opacity-0 p-2
         `}>
-        <NavbarItem href="/" label="Home" />
-        <NavbarItem href="/about-us" label="About Us">
-          <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
-          <NavbarDropdownItem href="/about-us/keong-mas-2024">Keong Mas (NUANSA 2024)</NavbarDropdownItem>
-        </NavbarItem>
-        <NavbarItem href="/our-team" label="Our Team">
-          <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
-          <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
-          <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
-        </NavbarItem>
-        <NavbarItem href="/contact-us" label="Contact Us" />
+        <div className="
+          flex flex-col md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
+          bg-green-b md:bg-inherit rounded-md md:rounded-none shadow-2xl md:shadow-none">
+          <NavbarItem href="/" label="Home" />
+          <NavbarItem href="/about-us" label="About Us">
+            <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
+            <NavbarDropdownItem href="/about-us/keong-mas-2024">Keong Mas (NUANSA 2024)</NavbarDropdownItem>
+          </NavbarItem>
+          <NavbarItem href="/our-team" label="Our Team">
+            <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
+            <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
+            <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
+          </NavbarItem>
+          <NavbarItem href="/contact-us" label="Contact Us" />
+        </div>
       </div>
       <div>
         <div
@@ -131,7 +135,6 @@ const Navbar = () => {
           {mobileMenuHidden ? <MdMenu /> : <MdClose />}
         </div>
       </div>
-      
     </motion.nav>
   );
 };
