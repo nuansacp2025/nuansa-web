@@ -61,6 +61,17 @@ export default function ContactPage() {
             });
     }, []);
 
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const elementId = hash.substring(1); // Remove the '#' from the hash
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, [businessFormConfig, generalFormConfig]);
+
     return (
         <div className="items-center px-4 md:px-12 lg:px-16 pb-12">
             <Suspense>
