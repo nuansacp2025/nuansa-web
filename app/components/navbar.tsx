@@ -106,14 +106,16 @@ const Navbar = () => {
           NUANSA
         </span>
       </div>
-      <div className={`
-        ${mobileMenuHidden ? "hidden" : "block"}
+      <div
+        className={`${mobileMenuHidden ? "hidden" : "block"}
         absolute top-full left-0 right-0 h-screen bg-black bg-opacity-25 z-10
         md:block md:top-0 md:w-full md:h-full md:bg-inherit md:bg-opacity-0 p-2
-        `}>
-        <div className="
-          flex flex-col md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
-          bg-green-b md:bg-inherit rounded-md md:rounded-none shadow-2xl md:shadow-none">
+        `}
+        onClick={() => {setMobileMenuHidden(true)}}>
+        <div
+          className="flex flex-col md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
+          bg-green-b md:bg-inherit rounded-md md:rounded-none shadow-2xl md:shadow-none"
+          onClick={(e) => {e.stopPropagation() /* prevent trigerring parent onClick */}}>
           <NavbarItem href="/" label="Home" />
           <NavbarItem href="/about-us" label="About Us">
             <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
