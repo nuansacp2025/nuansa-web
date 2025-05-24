@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: "Nuansa 2025: The Crying Stone",
   description: "Buy the tickets now!",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/nuansa-icon.ico",
+    shortcut: "/nuansa-icon.ico",
+    apple: "/nuansa-icon.ico",
   },
 };
 
