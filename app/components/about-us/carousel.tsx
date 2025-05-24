@@ -1,9 +1,10 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, A11y } from 'swiper/modules';
+import { Navigation, Scrollbar, Autoplay, A11y } from 'swiper/modules';
 import { ReactNode, useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 interface CarouselProps {
   children: ReactNode[];
@@ -27,10 +28,16 @@ export default function Carousel({ children }: CarouselProps) {
   return (
     <div className="w-[90vw] mx-auto relative">
       <Swiper
-        modules={[Navigation, A11y]}
+        modules={[Navigation, Scrollbar, Autoplay, A11y]}
         spaceBetween={0}
-        slidesPerView="auto"
+        slidesPerView={1}
+        loop
         navigation
+        scrollbar={{ draggable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
