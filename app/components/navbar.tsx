@@ -24,10 +24,15 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
       } : undefined}
     >
       <div className="flex items-center self-stretch">
-        <Link href={href} className="p-4 flex-1">
-          <span className="text-sm font-semibold leading-6 text-white">
+        <Link href={href} className="group transition p-4 flex-1">
+          <span className={`
+            text-sm font-semibold leading-6 md:text-white
+            ${mobileDropdownHidden ? "text-white" : "text-orange-a"}
+            md:group-hover:text-orange-a duration-300
+            `}>
             {label}
           </span>
+          <span className="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-orange-a" />
         </Link>
         {children && (
           <div
@@ -56,12 +61,13 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
 
 const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactNode }) => {
   return (
-    <Link href={href}>
-      <div className="
+    <Link href={href} className="group transition">
+      <div className={`
         flex items-center rounded-md p-2
         text-sm font-normal leading-6 text-white
-        md:font-semibold md:text-gray-900 md:hover:bg-gray-50
-        ">
+        md:font-semibold md:text-gray-900
+        md:group-hover:bg-gray-50 md:group-hover:text-orange-a transition-all duration-300
+        `}>
         {children}
       </div>
     </Link>
