@@ -11,6 +11,9 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
   const [dropdownHidden, setDropdownHidden] = React.useState(true);  // state for desktop layout (using hover)
   const [mobileDropdownHidden, setMobileDropdownHidden] = React.useState(true);  // state for mobile layout (using click)
 
+  const pathname = usePathname();
+  const isCurrentPage = (pathname === href || pathname.startsWith(href+"/"))
+
   return (
     <div
       className="relative flex flex-col"
@@ -24,10 +27,15 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
       } : undefined}
     >
       <div className="flex items-center self-stretch">
-        <Link href={href} className="p-4 flex-1">
-          <span className="text-sm font-semibold leading-6 text-white">
+        <Link href={href} className="group transition p-4 flex-1">
+          <span className={`
+            text-sm font-semibold leading-6
+            ${isCurrentPage ? "text-orange-a" : "text-white"}
+            md:group-hover:text-orange-a duration-300
+            `}>
             {label}
           </span>
+          <span className="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-orange-a" />
         </Link>
         {children && (
           <div
@@ -45,7 +53,7 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
           ${dropdownHidden ? "md:hidden" : "md:flex"}
           flex-col items-stretch w-full pl-4 md:p-2
           md:absolute md:w-screen md:max-w-xs md:-left-1 md:z-10 md:-mt-2 md:top-full
-          md:rounded-lg md:bg-white md:shadow-md
+          md:rounded-lg md:bg-stone-200 md:shadow-md
           `}>
           {children}
         </div>
@@ -56,12 +64,13 @@ const NavbarItem = ({ href, label, children }: { href: string, label: string, ch
 
 const NavbarDropdownItem = ({ href, children }: { href: string, children: ReactNode }) => {
   return (
-    <Link href={href}>
-      <div className="
+    <Link href={href} className="group transition">
+      <div className={`
         flex items-center rounded-md p-2
         text-sm font-normal leading-6 text-white
-        md:font-semibold md:text-gray-900 md:hover:bg-gray-50
-        ">
+        md:font-semibold md:text-gray-900
+        md:group-hover:bg-stone-100 transition-all duration-300
+        `}>
         {children}
       </div>
     </Link>
@@ -85,6 +94,7 @@ const Navbar = () => {
   })
   useEffect(() => {
     setNavbarHidden(pathname === "/" ? "hidden" : "visible");
+    setMobileMenuHidden(true);
   }, [pathname]);
 
   return (
@@ -99,23 +109,28 @@ const Navbar = () => {
           NUANSA
         </span>
       </div>
-      <div className={`
-        ${mobileMenuHidden ? "hidden" : "flex"}
-        absolute h-max inset-0 top-full z-10 md:relative md:flex md:top-0 
-        flex-col p-2 md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
-        bg-green-b md:bg-inherit
-        `}>
-        <NavbarItem href="/" label="Home" />
-        <NavbarItem href="/about-us" label="About Us">
-          <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
-          <NavbarDropdownItem href="/about-us/keong-mas-2024">Keong Mas (NUANSA 2024)</NavbarDropdownItem>
-        </NavbarItem>
-        <NavbarItem href="/our-team" label="Our Team">
-          <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
-          <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
-          <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
-        </NavbarItem>
-        <NavbarItem href="/contact-us" label="Contact Us" />
+      <div
+        className={`${mobileMenuHidden ? "hidden" : "block"}
+        absolute top-full left-0 right-0 h-screen bg-black bg-opacity-25 z-10
+        md:block md:top-0 md:w-full md:h-full md:bg-inherit md:bg-opacity-0 p-2
+        `}
+        onClick={() => {setMobileMenuHidden(true)}}>
+        <div
+          className="flex flex-col md:flex-row md:items-center md:justify-center md:p-0 md:gap-6 lg:gap-12
+          bg-green-b md:bg-inherit rounded-md md:rounded-none shadow-2xl md:shadow-none"
+          onClick={(e) => {e.stopPropagation() /* prevent trigerring parent onClick */}}>
+          <NavbarItem href="/" label="Home" />
+          <NavbarItem href="/about-us" label="About Us">
+            <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
+            <NavbarDropdownItem href="/about-us/keong-mas-2024">Keong Mas (NUANSA 2024)</NavbarDropdownItem>
+          </NavbarItem>
+          <NavbarItem href="/our-team" label="Our Team">
+            <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
+            <NavbarDropdownItem href="/our-team/production">Production</NavbarDropdownItem>
+            <NavbarDropdownItem href="/our-team/external-affairs">External Affairs</NavbarDropdownItem>
+          </NavbarItem>
+          <NavbarItem href="/contact-us" label="Contact Us" />
+        </div>
       </div>
       <div>
         <div
@@ -125,7 +140,6 @@ const Navbar = () => {
           {mobileMenuHidden ? <MdMenu /> : <MdClose />}
         </div>
       </div>
-      
     </motion.nav>
   );
 };

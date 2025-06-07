@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import RegularButton from "../button";
 
 interface GeneralFormProps {
   formConfig: FormField[];
@@ -76,9 +77,7 @@ export default function GeneralForm({ formConfig }: GeneralFormProps) {
           ))}
         </div>
         <div className="mt-10">
-          <button
-            className="block w-full sm:w-48 rounded-md bg-orange-a px-3.5 py-2.5 text-center text-sm font-semibold text-green-a shadow-sm hover:bg-orange-a/75">Send Email
-          </button>
+          <RegularButton size="small" variant="orange" text="Send Email" />
         </div>
       </form>
     </div>

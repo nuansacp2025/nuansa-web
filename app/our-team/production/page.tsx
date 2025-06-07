@@ -4,6 +4,7 @@ import GroupCard from "@/app/components/our-team/group-card";
 import Image from "next/image";
 import Link from "next/link";
 import { FadeInDiv } from "@/app/components/animations";
+import RegularButton from "@/app/components/button";
 
 export default function Page() {
   const team = [
@@ -59,9 +60,7 @@ export default function Page() {
               team.map(division => {
                 return (
                   <Link key={division.team} href={`#${division.team}`}>
-                    <button className="block w-64 rounded-md bg-green-b px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-green-b/75">
-                      {division.team}
-                    </button>
+                    <RegularButton size="normal" variant="green" text={division.team} />
                   </Link>
                 );
               })
