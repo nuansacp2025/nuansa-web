@@ -11,23 +11,31 @@ export default function Page() {
   const team = [
     {
       team: "Vocal",
-      src: "/images/our-team/Vocal.jpg"
+      src: "/images/our-team/arts/Vocal.jpg"
     },
     {
       team: "Music",
-      src: "/images/our-team/Music.JPG"
+      src: "/images/our-team/arts/Music.JPG"
     },
     {
       team: "Dance 1",
-      src: "/images/our-team/Dance1.JPG"
+      src: "/images/our-team/arts/Dance1.JPG"
     },
     {
       team: "Dance 2",
-      src: "/images/our-team/Dance2.JPG"
+      src: "/images/our-team/arts/Dance2.JPG"
     },
     {
-      team: "Scriptwriter",
-      src: "/images/our-team/Scriptwriter.jpg"
+      team: "Scriptwriters",
+      src: "/images/our-team/arts/Scriptwriters.jpg"
+    },
+    {
+      team: "Acting 1",
+      src: "/images/our-team/arts/Acting1.jpg"
+    },
+    {
+      team: "Acting 2",
+      src: "/images/our-team/arts/Acting2.jpg"
     }
   ]
   //snl (sound and lighting), snp (set and properties), lnw (logistic and wardrobe), sm, wnm production

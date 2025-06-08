@@ -28,5 +28,6 @@ interface SponsorTier {
     tier: string;
     color: string;
     showdesc: boolean;
+    maxheight: string;
     companies: Sponsor[][];
 }

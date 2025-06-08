@@ -17,28 +17,36 @@
                 "synopsis": "A selfish and lazy daughter neglects her ailing mother, repaying her love with cold neglect and biting words. Heartbroken and alone, the mother kneels in the twilight, praying for mercy on her own child. In answer to the prayer, lightning strikes the daughter, transforming her into a weeping stone statue. The tale serves as a cautionary reminder of a timeless truth: filial duty is not a burden but a sacred bond, and to dishonor one’s parents is to risk losing one’s own humanity.",
                 "characters": [
                     {
-                        "name": "character",
+                        "name": "Neezar",
                         "image": {
-                            "src": "/images/characters/character_template.png",
+                            "src": "/images/characters/Neezar.JPG",
                             "alt": "character"
                         },
-                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                        "description": "Neezar"
                     },
                     {
-                        "name": "character",
+                        "name": "Ahza",
                         "image": {
-                            "src": "/images/characters/character_template.png",
+                            "src": "/images/characters/Ahza.JPG",
                             "alt": "character"
                         },
-                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                        "description": "Ahza"
                     },
                     {
-                        "name": "character",
+                        "name": "Becca",
                         "image": {
-                            "src": "/images/characters/character_template.png",
+                            "src": "/images/characters/Becca.JPG",
                             "alt": "character"
                         },
-                        "description": "The daughter is very lazy and refuses to help her sick mother, instead treating her cruelly."
+                        "description": "Becca"
+                    },
+                    {
+                        "name": "Eunice",
+                        "image": {
+                            "src": "/images/characters/Eunice.JPG",
+                            "alt": "character"
+                        },
+                        "description": "Eunice"
                     }
                 ],
                 "sponsors": [
@@ -46,20 +54,37 @@
                         "tier": "Gold",
                         "color": "gold",
                         "showdesc": false,
+                        "maxheight": "150px",
                         "companies": [
                             [
                                 {
-                                    "name": "Business Indonesia Singapore Association",
+                                    "name": "Anywheel",
                                     "image": {
-                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                        "alt": "BISA Logo"
+                                        "src": "/images/sponsors/gold/Anywheel.png",
+                                        "alt": "Anywheel Logo"
                                     }
                                 },
                                 {
-                                    "name": "Wardaya College",
+                                    "name": "BNI",
                                     "image": {
-                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
-                                        "alt": "Wardaya College Logo"
+                                        "src": "/images/sponsors/gold/bni.PNG",
+                                        "alt": "BNI Logo"
+                                    }
+                                }
+                            ],
+                            [
+                                {
+                                    "name": "Daily Vanity",
+                                    "image": {
+                                        "src": "/images/sponsors/gold/Daily Vanity.png",
+                                        "alt": "Daily Vanity Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Kyu Skincare",
+                                    "image": {
+                                        "src": "/images/sponsors/gold/Kyu Skincare.jpeg",
+                                        "alt": "Kyu Skincare Logo"
                                     }
                                 }
                             ]
@@ -69,20 +94,21 @@
                         "tier": "Silver",
                         "color": "silver",
                         "showdesc": false,
+                        "maxheight": "100px",
                         "companies": [
                             [
                                 {
-                                    "name": "Business Indonesia Singapore Association",
+                                    "name": "Eagle Brand",
                                     "image": {
-                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                        "alt": "BISA Logo"
+                                        "src": "/images/sponsors/silver/Eagle Brand.png",
+                                        "alt": "Eagle Brand Logo"
                                     }
                                 },
                                 {
-                                    "name": "Wardaya College",
+                                    "name": "PT Tridaya Sentosa",
                                     "image": {
-                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
-                                        "alt": "Wardaya College Logo"
+                                        "src": "/images/sponsors/silver/PT Tridaya Sentosa.jpeg",
+                                        "alt": "PT Tridaya Sentosa Logo"
                                     }
                                 }
                             ]
@@ -92,19 +118,50 @@
                         "tier": "Bronze",
                         "color": "#CD7F32",
                         "showdesc": false,
+                        "maxheight": "50px",
                         "companies": [
                             [
                                 {
-                                    "name": "Business Indonesia Singapore Association",
+                                    "name": "Bank Indonesia",
                                     "image": {
-                                        "src": "https://cdn.asp.events/CLIENT_Business_DCF4FF16_FAB8_0D4B_807D8955A223D6D8/sites/TBSS-2023/media/libraries/partners/BISA-logo-(2).jpeg",
-                                        "alt": "BISA Logo"
+                                        "src": "/images/sponsors/bronze/Bank Indonesia.png",
+                                        "alt": "Bank Indonesia Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Clearvision",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Clearvision.png",
+                                        "alt": "Clearvision Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Grin Affair",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Grin Affair.jpg",
+                                        "alt": "Grin Affair Logo"
+                                    }
+                                }
+                            ],
+                            [
+                                {
+                                    "name": "PT Prima Sarana",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/PT Prima Sarana.jpeg",
+                                        "alt": "PT Prima Sarana Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Rima Synergy Global",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Rima Synergy Global.png",
+                                        "alt": "Rima Synergy Global Logo"
                                     }
                                 },
                                 {
                                     "name": "Wardaya College",
                                     "image": {
-                                        "src": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/8287ebaf6cbce55cd8ab1604ca92281f.png",
+                                        "src": "/images/sponsors/bronze/Wardaya College.png",
                                         "alt": "Wardaya College Logo"
                                     }
                                 }
@@ -118,37 +175,28 @@
                     {
                         "year": 2024,
                         "title": "[Nuansa 2024] Keong Mas: Daha to Surabaya",
-                        "description": "\"Keongmas,\" which translates to \"Golden Snail\" in Indonesian, could indicate a theme or symbol central to the event. It might involve elements related to the cultural significance or artistic interpretation.",
+                        "description": "NUANSA 2024 presents a mesmerizing journey with \"Keong Mas: Daha to Surabaya,\" a reimagined tale blending ancient Javanese folklore with the pulse of modern Surabaya. In a unique twist, Candra Kirana finds herself displaced to present-day Surabaya, adding a new layer to her journey of self-discovery. NUANSA 2024 explores the timeless struggle of finding a home amidst the challenges of the modern world.",
                         "video": {
                             "title": "NUANSA 2024",
                             "src": "https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
                         }
                     }, 
                     {
-                        "year": 2023,
-                        "title": "Bruno Mars: Die with a Smile",
-                        "description": "A captivating performance by Bruno Mars, showcasing his unique style and musical talent.",
+                        "year": 2019,
+                        "title": "[Nuansa 2019] Lukisan Jati",
+                        "description": "LUKISAN JATI (Portrait of Self) is a coming-of-age story about two aspiring artists - Raden Saleh, a pioneering painter and the first Indonesian scholar to study in Europe, and Elsa, a young present-day student who has won a prestigious scholarship to study art in Singapore. The glitz and glamour of city life sets the stage for Saleh and Elsa to chase their dreams of becoming successful artists, but with it comes challenges that will force them to question whether their art is worth pursuing.",
                         "video": {
-                            "title": "Die with a Smile",
-                            "src": "https://www.youtube.com/embed/kPa7bsKwL-c?si=onf1RUNu_7lvs308"
+                            "title": "NUANSA 2019",
+                            "src": "https://www.youtube.com/embed/kqOBS3v0gEc?si=qnbI_-wPGjp_OyZg"
                         }
                     }, 
                     {
-                        "year": 2022,
-                        "title": "[UCL Final 1999] When the Fallen Devil Rises to Rule the World!",
-                        "description": "<p>The 1999 UEFA Champions League final between Manchester United and Bayern Munich stands as one of the greatest comebacks in football history. Played at Camp Nou in Barcelona, Bayern Munich took an early lead with a sixth-minute goal from Mario Basler. For most of the match, Bayern appeared to be in control, hitting the post and forcing United to defend desperately. However, in stoppage time, Manchester United's never-say-die attitude led to an incredible turnaround. Teddy Sheringham scored the equalizer in the 91st minute, followed by Ole Gunnar Solskjær’s dramatic winning goal just two minutes later. In the span of 120 seconds, Manchester United turned defeat into victory, shocking Bayern Munich and the world to win 2-1.</p><p>This triumph also completed Manchester United’s historic treble, as they had already won the Premier League and the FA Cup earlier that season. Winning the treble is one of the greatest achievements in football, a rare feat that showcases a team’s ability to dominate across multiple competitions in a single season. United's 1998-1999 team was the epitome of resilience, teamwork, and tactical brilliance under Sir Alex Ferguson. Their treble win not only solidified their place in football history but also cemented Manchester United's reputation as one of the greatest clubs in the world.</p>",
+                        "year": 2017,
+                        "title": "[Nuansa 2017] Dasawarsa - Galigo: The Chaos Within",
+                        "description": "The musical Galigo: The Chaos Within is adapted from one of the longest epic manuscript ever written: I La Galigo. The poetic text set in South Sulawesi and has been recognised by UNESCO in its Memory of the World Register.",
                         "video": {
-                            "title": "UCL Final 1999",
-                            "src": "https://www.youtube.com/embed/oTgaI5QbNLc?si=WY0E5EFyO5KhcGE4"
-                        }
-                    }, 
-                    {
-                        "year": 2021,
-                        "title": "Bruno Mars: Somewhere in Brooklyn",
-                        "description": "In \"Somewhere in Brooklyn,\" Bruno Mars captures the essence of fleeting moments and missed opportunities. The song tells the story of a girl who leaves a lasting impression but remains elusive, forever out of reach in the bustling streets of Brooklyn. Her memory lingers in the mind of the narrator, representing the universal longing for connection and the mystery of those chance encounters that leave us wondering \"what if?\" The song beautifully blends nostalgia and hope, set against the vibrant backdrop of Brooklyn's charm, as the narrator continues to search for that unforgettable face in a city filled with endless possibilities.",
-                        "video": {
-                            "title": "Bruno Mars: Somewhere in Brooklyn",
-                            "src": "https://www.youtube.com/embed/K851vIUK37Q?si=2L511iw_34ZRs0BP"
+                            "title": "NUANSA 2017",
+                            "src": "https://www.youtube.com/embed/kENe1-ZcBFs?si=h1v9ScYGwg_7Z7ks"
                         }
                     }
                 ],

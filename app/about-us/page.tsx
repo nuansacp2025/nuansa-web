@@ -80,67 +80,14 @@ export default function AboutUs() {
                 videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
               />
               <VideoFrame
-                videoTitle="NUANSA 2024"
-                videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
+                videoTitle="NUANSA 2019"
+                videoSrc="https://www.youtube.com/embed/kqOBS3v0gEc?si=qnbI_-wPGjp_OyZg"
               />
               <VideoFrame
-                videoTitle="NUANSA 2024"
-                videoSrc="https://www.youtube.com/embed/vxw_tFYr1mQ?si=9JU4IXp-JoKe0yrh"
+                videoTitle="NUANSA 2017"
+                videoSrc="https://www.youtube.com/embed/kENe1-ZcBFs?si=h1v9ScYGwg_7Z7ks"
               />
             </Carousel>
-          </div>
-        </FadeInDiv>
-      </section>
-      <section className="text-center py-12 px-4 md:px-10">
-        <FadeInDiv>
-          <h2 className="text-4xl mb-10 text-green-a">Why Join Us</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
-            {/* Member Card */}
-            {[
-              {
-                name: "Evan Wijaya",
-                title: "President",
-                company: "Nuansa",
-                imgSrc: "/images/our-team/management/evan-wijaya.jpg", // Save the uploaded image to /public/images
-                quote: "Joining Nuansa connected me with amazing people and creativity!"
-              },
-              {
-                name: "Evan Wijaya",
-                title: "President",
-                company: "Nuansa",
-                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
-                quote: "I found a community that values culture and collaboration."
-              },
-              {
-                name: "Evan Wijaya",
-                title: "President",
-                company: "Nuansa",
-                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
-                quote: "Creativity meets purpose here. It’s magical!"
-              },
-              {
-                name: "Evan Wijaya",
-                title: "President",
-                company: "Nuansa",
-                imgSrc: "/images/our-team/management/evan-wijaya.jpg",
-                quote: "An inspiring platform for growth and friendship."
-              }
-            ].map((member, idx) => (
-              <div key={idx} className="relative group overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src={member.imgSrc}
-                  alt={member.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-72 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white px-4 text-center">
-                  <h3 className="text-lg font-bold">{member.name}</h3>
-                  <p className="text-sm italic">{member.title}, {member.company}</p>
-                  <p className="mt-2 text-sm">{member.quote}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </FadeInDiv>
       </section>

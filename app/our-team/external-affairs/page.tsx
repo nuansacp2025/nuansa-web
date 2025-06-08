@@ -10,19 +10,19 @@ export default function Page() {
   const team = [
     {
       team: "Tech",
-      src: "/images/our-team/Tech.JPG"
+      src: "/images/our-team/external-affairs/Tech.JPG"
     },
     {
       team: "Pubs",
-      src: "/images/our-team/Pubs.jpg"
+      src: "/images/our-team/external-affairs/Pubs.jpg"
     },
     {
       team: "Ticketing",
-      src: "/images/our-team/Ticketing.JPG"
+      src: "/images/our-team/external-affairs/Ticketing.JPG"
     },
     {
       team: "CR",
-      src: "/images/our-team/CR.jpg"
+      src: "/images/our-team/external-affairs/CR.jpg"
     }
   ]
 

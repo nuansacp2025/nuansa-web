@@ -10,23 +10,23 @@ export default function Page() {
   const team = [
     {
       team: "Sound & Lighting",
-      src: "/images/our-team/SnL.JPG"
+      src: "/images/our-team/production/SnL.JPG"
     },
     {
       team: "Stage Management",
-      src: "/images/our-team/SM.JPG"
+      src: "/images/our-team/production/SM.JPG"
     },
     {
       team: "Logistics & Wardrobe",
-      src: "/images/our-team/LnW.JPG"
+      src: "/images/our-team/production/LnW.JPG"
     },
     {
       team: "Wardrobe & Makeup",
-      src: "/images/our-team/WnP.jpg"
+      src: "/images/our-team/production/WnM.jpg"
     },
     {
       team: "Sets & Props",
-      src: "/images/our-team/SnP.JPG"
+      src: "/images/our-team/production/SnP.JPG"
     }
   ]
   return (
