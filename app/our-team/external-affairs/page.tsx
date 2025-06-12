@@ -10,19 +10,19 @@ export default function Page() {
   const team = [
     {
       team: "Tech",
-      src: "/images/our-team/Tech.JPG"
+      src: "/images/our-team/external-affairs/Tech.JPG"
     },
     {
       team: "Pubs",
-      src: "/images/our-team/Pubs.jpg"
+      src: "/images/our-team/external-affairs/Pubs.jpg"
     },
     {
       team: "Ticketing",
-      src: "/images/our-team/Ticketing.JPG"
+      src: "/images/our-team/external-affairs/Ticketing.JPG"
     },
     {
       team: "CR",
-      src: "/images/our-team/CR.jpg"
+      src: "/images/our-team/external-affairs/CR.jpg"
     }
   ]
 
@@ -41,7 +41,7 @@ export default function Page() {
               What We Do
             </h2>
             <p className="text-lg md:text-xl text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            We manage communications, partnerships, and outreach. We build relationships with sponsors, media, and the wider community to amplify Nuansa’s impact and foster cross-cultural exchange.
             </p>
           </div>
         </FadeInDiv>

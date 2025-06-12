@@ -84,7 +84,7 @@ describe("SponsorGrid Component", () => {
 
     mockSponsors.forEach((tier) => {
       // Check that the tier heading is rendered with the correct text and style
-      const tierHeading = screen.getByText(`${tier.tier} Sponsors`);
+      const tierHeading = screen.getByTestId(`${tier.tier}`);
       expect(tierHeading).toBeInTheDocument();
       expect(tierHeading).toHaveStyle(`color: ${tier.color}`);
     });

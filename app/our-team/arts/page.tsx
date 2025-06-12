@@ -11,23 +11,31 @@ export default function Page() {
   const team = [
     {
       team: "Vocal",
-      src: "/images/our-team/Vocal.jpg"
+      src: "/images/our-team/arts/Vocal.jpg"
     },
     {
       team: "Music",
-      src: "/images/our-team/Music.JPG"
+      src: "/images/our-team/arts/Music.JPG"
     },
     {
       team: "Dance 1",
-      src: "/images/our-team/Dance1.JPG"
+      src: "/images/our-team/arts/Dance1.JPG"
     },
     {
       team: "Dance 2",
-      src: "/images/our-team/Dance2.JPG"
+      src: "/images/our-team/arts/Dance2.JPG"
     },
     {
-      team: "Scriptwriter",
-      src: "/images/our-team/Scriptwriter.jpg"
+      team: "Scriptwriters",
+      src: "/images/our-team/arts/Scriptwriters.jpg"
+    },
+    {
+      team: "Acting 1",
+      src: "/images/our-team/arts/Acting1.jpg"
+    },
+    {
+      team: "Acting 2",
+      src: "/images/our-team/arts/Acting2.jpg"
     }
   ]
   //snl (sound and lighting), snp (set and properties), lnw (logistic and wardrobe), sm, wnm production
@@ -47,7 +55,7 @@ export default function Page() {
               What We Do
             </h2>
             <p className="text-lg md:text-xl text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            We curate and produce creative cultural performances and visual arts that celebrate Indonesia’s rich heritage. We collaborate with artists and performers to bring traditional and contemporary expressions to life.
             </p>
           </div>
         </FadeInDiv>

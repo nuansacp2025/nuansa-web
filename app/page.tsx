@@ -75,7 +75,7 @@ export default function Home() {
         </p>
       </FadeInDiv>
       <FadeInDiv className="w-full py-4 px-8 sm:py-12 sm:px-20 md:py-16 md:px-30 bg-transparent">
-        <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-orange-a">
+        <h2 className="text-3xl md:text-4xl pb-8 md:pb-12 font-bold text-center text-orange-a">
           Characters
         </h2>
         <div className="flex justify-between">
