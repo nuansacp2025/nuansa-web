@@ -4,10 +4,14 @@ import { FadeInDiv } from "@/app/components/animations";
 import { ScrollableBackground } from "@/app/components/background";
 import Gallery from "@/app/components/about-us/keong-mas-2024/gallery";
 import MainCast from "@/app/components/about-us/keong-mas-2024/main-casts";
+import { notFound } from 'next/navigation';
 
 export default function AboutUsKeongMasPage() {
   const [castData, setCastData] = useState<CastMember[]>([]);
   const [galleryImages, setGalleryImages] = useState<ImageConfig[][]>([]);
+
+  // Temporarily disable this page
+  notFound();
 
   useEffect(() => {
     fetch('/config.json')

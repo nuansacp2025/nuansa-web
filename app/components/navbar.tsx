@@ -122,7 +122,9 @@ const Navbar = () => {
           <NavbarItem href="/" label="Home" />
           <NavbarItem href="/about-us" label="About Us">
             <NavbarDropdownItem href="/about-us/history">History</NavbarDropdownItem>
+            {/* Temporarily disabled
             <NavbarDropdownItem href="/about-us/keong-mas-2024">Keong Mas (NUANSA 2024)</NavbarDropdownItem>
+            */}
           </NavbarItem>
           <NavbarItem href="/our-team" label="Our Team">
             <NavbarDropdownItem href="/our-team/arts">Arts</NavbarDropdownItem>
