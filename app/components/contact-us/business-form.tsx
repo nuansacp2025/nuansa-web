@@ -9,16 +9,25 @@ interface BusinessFormProps {
 export default function BusinessForm({ formConfig }: BusinessFormProps) {
     const [formData, setFormData] = useState<Record<string, string>>({});
 
-    const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+    const [formSubmitKey, setFormSubmitKey] = useState<string | null>(null);
     const formSubmitSuccessUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL + "?success=true";
 
     useEffect(() => {
         const initialFormData = formConfig.reduce((acc, field) => {
-        acc[field.id] = "";
+        acc[field.id] = (field.type == "select" ? field.options![0].value : "");
         return acc;
         }, {} as Record<string, string>);
         setFormData(initialFormData);
     }, [formConfig]);
+
+    useEffect(() => {
+        if (formData["category"] === "ticketing") {
+            setFormSubmitKey(process.env.NEXT_PUBLIC_TICKETING_EMAIL!);
+        } else if (formData["category"] === "sponsorship-enquiries") {
+            setFormSubmitKey(process.env.NEXT_PUBLIC_SPONSORSHIP_EMAIL!);
+        }
+        console.log(formData);
+    }, [formData]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
