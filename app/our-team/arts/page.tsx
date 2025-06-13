@@ -26,16 +26,16 @@ export default function Page() {
       src: "/images/our-team/arts/Dance2.JPG"
     },
     {
-      team: "Scriptwriters",
-      src: "/images/our-team/arts/Scriptwriters.jpg"
+      team: "Script Writers",
+      src: "/images/our-team/arts/ScriptWriters.jpg"
     },
     {
-      team: "Acting 1",
-      src: "/images/our-team/arts/Acting1.jpg"
+      team: "Main Casts",
+      src: "/images/our-team/arts/MainCasts.jpg"
     },
     {
-      team: "Acting 2",
-      src: "/images/our-team/arts/Acting2.jpg"
+      team: "Supporting Casts",
+      src: "/images/our-team/arts/SupportingCasts.jpg"
     }
   ]
   //snl (sound and lighting), snp (set and properties), lnw (logistic and wardrobe), sm, wnm production

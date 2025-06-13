@@ -9,12 +9,12 @@ interface GeneralFormProps {
 export default function GeneralForm({ formConfig }: GeneralFormProps) {
   const [formData, setFormData] = useState<Record<string, string>>({});
 
-  const formSubmitKey = process.env.NEXT_PUBLIC_FORMSUBMIT_KEY;
+  const formSubmitKey = process.env.NEXT_PUBLIC_PD_EMAIL!;
   const formSubmitSuccessUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL + "?success=true";
 
   useEffect(() => {
     const initialFormData = formConfig.reduce((acc, field) => {
-      acc[field.id] = "";
+      acc[field.id] = (field.type == "select" ? field.options![0].value : "");
       return acc;
     }, {} as Record<string, string>);
     setFormData(initialFormData);
