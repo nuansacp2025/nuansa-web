@@ -22,12 +22,12 @@ interface Sponsor {
     image: ImageConfig;
     description?: string;
     website?: string;
+    maxheight: string;
 }
 
 interface SponsorTier {
     tier: string;
     color: string;
     showdesc: boolean;
-    maxheight: string;
     companies: Sponsor[][];
 }

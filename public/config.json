@@ -54,11 +54,11 @@
                         "tier": "Gold",
                         "color": "gold",
                         "showdesc": false,
-                        "maxheight": "150px",
                         "companies": [
                             [
                                 {
                                     "name": "Anywheel",
+                                    "maxheight": "150px",
                                     "image": {
                                         "src": "/images/sponsors/gold/Anywheel.png",
                                         "alt": "Anywheel Logo"
@@ -66,6 +66,7 @@
                                 },
                                 {
                                     "name": "BNI",
+                                    "maxheight": "150px",
                                     "image": {
                                         "src": "/images/sponsors/gold/bni.PNG",
                                         "alt": "BNI Logo"
@@ -75,6 +76,7 @@
                             [
                                 {
                                     "name": "Daily Vanity",
+                                    "maxheight": "170px",
                                     "image": {
                                         "src": "/images/sponsors/gold/Daily Vanity.png",
                                         "alt": "Daily Vanity Logo"
@@ -82,6 +84,7 @@
                                 },
                                 {
                                     "name": "Kyu Skincare",
+                                    "maxheight": "170px",
                                     "image": {
                                         "src": "/images/sponsors/gold/Kyu Skincare.jpeg",
                                         "alt": "Kyu Skincare Logo"
@@ -94,11 +97,11 @@
                         "tier": "Silver",
                         "color": "silver",
                         "showdesc": false,
-                        "maxheight": "100px",
                         "companies": [
                             [
                                 {
                                     "name": "Eagle Brand",
+                                    "maxheight": "100px",
                                     "image": {
                                         "src": "/images/sponsors/silver/Eagle Brand.png",
                                         "alt": "Eagle Brand Logo"
@@ -106,6 +109,7 @@
                                 },
                                 {
                                     "name": "PT Tridaya Sentosa",
+                                    "maxheight": "100px",
                                     "image": {
                                         "src": "/images/sponsors/silver/PT Tridaya Sentosa.jpeg",
                                         "alt": "PT Tridaya Sentosa Logo"
@@ -118,48 +122,53 @@
                         "tier": "Bronze",
                         "color": "#CD7F32",
                         "showdesc": false,
-                        "maxheight": "50px",
                         "companies": [
                             [
                                 {
                                     "name": "Bank Indonesia",
+                                    "maxheight": "50px",
                                     "image": {
                                         "src": "/images/sponsors/bronze/Bank Indonesia.png",
                                         "alt": "Bank Indonesia Logo"
                                     }
                                 },
                                 {
-                                    "name": "Clearvision",
-                                    "image": {
-                                        "src": "/images/sponsors/bronze/Clearvision.png",
-                                        "alt": "Clearvision Logo"
-                                    }
-                                },
-                                {
-                                    "name": "Grin Affair",
-                                    "image": {
-                                        "src": "/images/sponsors/bronze/Grin Affair.jpg",
-                                        "alt": "Grin Affair Logo"
-                                    }
-                                }
-                            ],
-                            [
-                                {
-                                    "name": "PT Prima Sarana",
-                                    "image": {
-                                        "src": "/images/sponsors/bronze/PT Prima Sarana.jpeg",
-                                        "alt": "PT Prima Sarana Logo"
-                                    }
-                                },
-                                {
                                     "name": "Rima Synergy Global",
+                                    "maxheight": "70px",
                                     "image": {
                                         "src": "/images/sponsors/bronze/Rima synergy global.png",
                                         "alt": "Rima Synergy Global Logo"
                                     }
                                 },
                                 {
+                                    "name": "Clearvision",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Clearvision.png",
+                                        "alt": "Clearvision Logo"
+                                    }
+                                }
+                            ],
+                            [
+                                {
+                                    "name": "Grin Affair",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Grin Affair.jpg",
+                                        "alt": "Grin Affair Logo"
+                                    }
+                                },
+                                {
+                                    "name": "PT Prima Sarana",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/PT Prima Sarana.jpeg",
+                                        "alt": "PT Prima Sarana Logo"
+                                    }
+                                },
+                                {
                                     "name": "Wardaya College",
+                                    "maxheight": "70px",
                                     "image": {
                                         "src": "/images/sponsors/bronze/Wardaya College.png",
                                         "alt": "Wardaya College Logo"
