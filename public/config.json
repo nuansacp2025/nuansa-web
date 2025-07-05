@@ -167,6 +167,13 @@
                                     }
                                 },
                                 {
+                                    "name": "Rima Synergy Global",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Rima Synergy Global.png",
+                                        "alt": "Rima Synergy Global Logo"
+                                    }
+                                },
+                                {
                                     "name": "Wardaya College",
                                     "maxheight": "70px",
                                     "image": {
