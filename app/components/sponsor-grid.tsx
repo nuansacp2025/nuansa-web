@@ -23,7 +23,7 @@ const SponsorGrid: React.FC<SponsorGridProps> = ({ sponsors }) => {
                         <img
                           src={sponsor.image.src}
                           alt={sponsor.image.alt}
-                          style={{ maxHeight: sponsorTier.maxheight }}
+                          style={{ maxHeight: sponsor.maxheight }}
                           className={`transition-transform duration-200 hover:scale-105`}
                         />
                       </div>
