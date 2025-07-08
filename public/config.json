@@ -72,6 +72,24 @@
                                         "alt": "BNI Logo"
                                     }
                                 }
+                            ],
+                            [
+                                {
+                                    "name": "Daily Vanity",
+                                    "maxheight": "170px",
+                                    "image": {
+                                        "src": "/images/sponsors/gold/Daily Vanity.png",
+                                        "alt": "Daily Vanity Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Kyu Skincare",
+                                    "maxheight": "155px",
+                                    "image": {
+                                        "src": "/images/sponsors/gold/Kyu Skincare.jpeg",
+                                        "alt": "Kyu Skincare Logo"
+                                    }
+                                }
                             ]
                         ]
                     },
@@ -80,29 +98,10 @@
                         "color": "silver",
                         "showdesc": false,
                         "companies": [
-                            
-                            [
-                                {
-                                    "name": "Daily Vanity",
-                                    "maxheight": "165px",
-                                    "image": {
-                                        "src": "/images/sponsors/silver/Daily Vanity.png",
-                                        "alt": "Daily Vanity Logo"
-                                    }
-                                },
-                                {
-                                    "name": "Kyu Skincare",
-                                    "maxheight": "150px",
-                                    "image": {
-                                        "src": "/images/sponsors/silver/Kyu Skincare.jpeg",
-                                        "alt": "Kyu Skincare Logo"
-                                    }
-                                }
-                            ],
                             [
                                 {
                                     "name": "Eagle Brand",
-                                    "maxheight": "150px",
+                                    "maxheight": "130px",
                                     "image": {
                                         "src": "/images/sponsors/silver/Eagle Brand.png",
                                         "alt": "Eagle Brand Logo"
@@ -110,7 +109,7 @@
                                 },
                                 {
                                     "name": "PT Tridaya Sentosa",
-                                    "maxheight": "150px",
+                                    "maxheight": "145px",
                                     "image": {
                                         "src": "/images/sponsors/silver/PT Tridaya Sentosa.jpeg",
                                         "alt": "PT Tridaya Sentosa Logo"
