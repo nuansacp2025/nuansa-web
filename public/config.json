@@ -174,6 +174,40 @@
                                         "alt": "Wardaya College Logo"
                                     }
                                 }
+                            ],
+                            [
+                                {
+                                    "name": "Brice by ecoBrown's",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Brice with ecoBrown logo.png",
+                                        "alt": "Brice by ecoBrown's Logo"
+                                    }
+                                },
+                                {
+                                    "name": "MGP",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/MGP Logo.png",
+                                        "alt": "MGP Logo"
+                                    }
+                                },
+                                {
+                                    "name": "Royal Banner",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/Royal Banner logo.jpg",
+                                        "alt": "Royal Banner Logo"
+                                    }
+                                },
+                                {
+                                    "name": "SPatial",
+                                    "maxheight": "70px",
+                                    "image": {
+                                        "src": "/images/sponsors/bronze/SPatial Logo.JPG",
+                                        "alt": "SPatial Logo"
+                                    }
+                                }
                             ]
                         ]
                     }
