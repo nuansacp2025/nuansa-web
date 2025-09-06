@@ -2,6 +2,7 @@ import React from "react";
 import { render, waitFor, screen } from "@testing-library/react";
 import Home from "@/app/page";
 import "@testing-library/jest-dom";
+import Timer from "@/app/components/timer";
 
 jest.mock("next/image", () => jest.fn(() => <div>Mocked Image</div>));
 jest.mock("next/link", () => ({
@@ -29,7 +30,10 @@ const mockHomeConfig = {
             alt: "Crying Stone Logo"
         }
     },
-  "launch-date": "2025-12-31",
+  "launch-date": "2025-09-07T19:00:00+08:00",
+  "end-date": "2025-09-07T22:00:00+08:00",
+  "ongoing-message": "Ongoing",
+  "post-event-message": "See you next year!",
   synopsis: "This is a sample synopsis.",
   characters: [
     {
@@ -89,6 +93,8 @@ describe("Home Page", () => {
     });
     
     it("renders correctly and fetches data", async () => {
+        const MockedTimer = Timer as jest.Mock;
+
         render(<Home />);
         
         await waitFor(() => {
@@ -99,6 +105,16 @@ describe("Home Page", () => {
             expect(screen.getByText("Characters")).toBeInTheDocument();
             expect(screen.getByText("Mocked SponsorGrid")).toBeInTheDocument();
         });
+
+        expect(MockedTimer).toHaveBeenCalledWith(
+          expect.objectContaining({
+              launchDate: mockHomeConfig["launch-date"],
+              endDate: mockHomeConfig["end-date"],
+              ongoingMessage: mockHomeConfig["ongoing-message"],
+              postMessage: mockHomeConfig["post-event-message"],
+          }),
+          {}
+      );
     });
 
     it("renders character images and descriptions", async () => {

@@ -60,20 +60,75 @@ const NumberDisplay = ({ value, label }: { value: string; label: string }) => {
   );
 }
 
-const Timer = ({ launchDate }: { launchDate: string }) => {
+interface TimerProps {
+  launchDate: string;
+  endDate: string;
+  ongoingMessage?: string;
+  postMessage?: string;
+}
+
+const computeStatus = (launchDate: string, endDate: string) => {
+  const now = new Date().getTime();
+  const start = new Date(launchDate).getTime();
+  const end = new Date(endDate).getTime();
+  if (isNaN(start) || isNaN(end)) return "invalid";
+  if (now < start) return "upcoming";
+  if (now < end) return "ongoing";
+  return "finished";
+};
+
+const Timer = ({
+  launchDate,
+  endDate,
+  ongoingMessage = "Ongoing",
+  postMessage = "See you next year!",
+}: TimerProps) => {
+  
   const [timeLeft, setTimeLeft] = useState<TimeCount>(getTimeLeft(launchDate));
+  const [status, setStatus] = useState<string>(() =>
+    computeStatus(launchDate, endDate),
+  );
 
   useEffect(() => {
-    if (!launchDate || isNaN(new Date(launchDate).getTime())) {
+    if (
+      !launchDate ||
+      isNaN(new Date(launchDate).getTime()) ||
+      !endDate ||
+      isNaN(new Date(endDate).getTime())
+    ) {
       setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
+      setStatus("invalid");
       return;
     }
     const interval = setInterval(() => {
       setTimeLeft(getTimeLeft(launchDate));
+      setStatus(computeStatus(launchDate, endDate));
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [launchDate]);
+  }, [launchDate, endDate]);
+
+  if (status === "ongoing") {
+    return (
+      <div
+        className="flex justify-center lg:justify-start mt-10 text-orange-a text-2xl lg:text-4xl"
+        suppressHydrationWarning
+      >
+        {ongoingMessage}
+      </div>
+    );
+  }
+
+  if (status === "finished") {
+    return (
+      <div
+        className="flex justify-center lg:justify-start mt-10 text-orange-a text-2xl lg:text-4xl"
+        suppressHydrationWarning
+      >
+        {postMessage}
+      </div>
+    );
+  }
 
   return (
     <div className="flex justify-center lg:justify-start mt-10 gap-1">

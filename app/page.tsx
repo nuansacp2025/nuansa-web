@@ -16,6 +16,9 @@ export default function Home() {
   const [images, setImages] = useState<Map<string, ImageConfig>>(new Map<string, ImageConfig>());
   const [launchDate, setLaunchDate] = useState<string>('');
   const [synopsis, setSynopsis] = useState<string>('');
+  const [endDate, setEndDate] = useState<string>('');
+  const [ongoingMessage, setOngoingMessage] = useState<string>('');
+  const [postMessage, setPostMessage] = useState<string>('');
   const [characters, setCharacters] = useState<CastMember[]>([]);
   const [sponsors, setSponsors] = useState<SponsorTier[]>([]);
 
@@ -32,6 +35,9 @@ export default function Home() {
         const images = configData?.app?.pages?.home?.images;
         const launchDate = configData?.app?.pages?.home?.['launch-date'];
         const synopsis = configData?.app?.pages?.home?.synopsis;
+        const endDate = configData?.app?.pages?.home?.['end-date'];
+        const ongoingMessage = configData?.app?.pages?.home?.['ongoing-message'];
+        const postMessage = configData?.app?.pages?.home?.['post-event-message'];
         const characters = configData?.app?.pages?.home?.characters;
         const sponsors = configData?.app?.pages?.home?.sponsors;
         if (backgroundImage) {
@@ -43,6 +49,15 @@ export default function Home() {
         }
         if(launchDate) {
           setLaunchDate(launchDate);
+        }
+        if(endDate) {
+          setEndDate(endDate);
+        }
+        if(ongoingMessage) {
+          setOngoingMessage(ongoingMessage);
+        }
+        if(postMessage) {
+          setPostMessage(postMessage);
         }
         if(synopsis) {
           setSynopsis(synopsis);
@@ -64,7 +79,12 @@ export default function Home() {
       <ScrollableBackground src={backgroundImage?.src || ''} height={1920} width={1080} />
       <FadeInDiv className="flex flex-col items-center justify-center h-screen w-full">
         <Image src={images.get('crying-stone-logo')?.src || ''} alt={images.get('crying-stone-logo')?.alt || ''} width={0} height={0} sizes="100vw" style={{ width: '32rem', height: 'auto', marginTop: '-160px' }}/>
-        <Timer launchDate={launchDate} />
+        <Timer
+          launchDate={launchDate}
+          endDate={endDate}
+          ongoingMessage={ongoingMessage}
+          postMessage={postMessage}
+        />
       </FadeInDiv>
       <FadeInDiv className="flex flex-col items-center justify-center w-full py-6 px-8 sm:py-12 sm:px-16 md:py-20 md:px-32 bg-transparent">
         <h2 className="text-3xl md:text-4xl pb-4 sm:pb-6 md:pb-10 font-bold text-center text-orange-a">
@@ -107,17 +127,19 @@ export default function Home() {
           <h4 className="text-lg">NUS Office of Student Affairs</h4>
         </div>
         <div className="flex justify-center">
-          <img
+          <Image
             src="/images/supported-by/nussu.png"
             alt="NUSSU Logo"
+            width={100}
+            height={100}
             style={{ maxHeight: "100px" }}
             className={`transition-transform duration-200 hover:scale-105`}
           />
-        </div>
-        <div className="flex justify-center">
-          <img
+          <Image
             src="/images/supported-by/nyc.png"
             alt="NYC Logo"
+            width={150}
+            height={150}
             style={{ maxHeight: "150px" }}
             className={`transition-transform duration-200 hover:scale-105`}
           />
